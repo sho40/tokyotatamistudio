@@ -1,7 +1,8 @@
 - @products.each do |p|
-  = p.name
-  = image_tag(p.image.url)
-  = p.text
-  = p.price
-  - @categories.each do |c|
-    = c.name
+  .content
+    = p.name
+    = image_tag(p.image.url)
+    = p.text
+    = p.price
+    - @categories.each do |c|
+      = c.name
