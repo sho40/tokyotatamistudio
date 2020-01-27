@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tokyo TATAMI Studio(HP)
+※現在製作中
 
-Things you may want to cover:
+世界一おしゃれな畳屋のHPへ！！
+畳製品、和紙を使用したおしゃれ畳、畳端材の販売・紹介サイト 外国人にお土産として畳の小物を。。！  
 
-* Ruby version
+機能（今後の実装内容含む）
+* pay.jpを利用した購入機能
+* rails adminを使用した管理者ページ導入
+* AWS S3を利用した画像管理
+* UIを意識したフロントサイドの実装 　 (TOPページのヘッダーにて現在の時間に合わせてopenしているかcloseしているかを表示など)
+ 
 
-* System dependencies
+デプロイ
+ 
+1. AWSを使用（現在は自身の学習のためheroku使用）  
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+その他
+友人からHP作成の依頼をいただき、自身の学習を兼ねて新機能を盛り込んで聞こうと考えています！
