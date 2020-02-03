@@ -1,7 +1,12 @@
 - @products.each do |p|
-  = p.name
-  = image_tag(p.image.url)
-  = p.text
-  = p.price
-  - @categories.each do |c|
-    = c.name
+  .content
+    = p.name
+    = image_tag(p.image.url)
+    = p.text
+    = p.price
+    = p.category.name
+    = form_with model: @cart_item, url: add_item_path do |f|
+      = f.label '個数'
+      = f.number_field :quantity
+      = f.hidden_field :product_id, value: p.id
+      = f.submit :"カートに追加"

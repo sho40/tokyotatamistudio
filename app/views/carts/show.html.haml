@@ -1,0 +1,17 @@
+- @cart_items.each do |i|
+  .cart_content{"item-id": "#{i.id}"}
+    = i.product.category.name
+    = i.product.name
+    = image_tag(i.product.image.url)
+    = i.product.price
+    %p 個数
+    = i.quantity
+    = form_with model: @cart_item, url: update_item_path do |item|
+      = item.number_field :quantity
+      = item.hidden_field :product_id, value: i.product_id
+      = item.submit :"個数変更"
+    .delete_btn 削除
+
+
+
+
