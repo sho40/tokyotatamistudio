@@ -1,1 +1,14 @@
 購入確認
+%br/
+%br/
+- @cart_items.each do |i|
+  .item_name
+    = i.product.name
+    = i.product.price
+%br/
+%br/
+= current_customer.name
+%br
+= current_customer.prefecture_name
+
+= link_to "ログアウト", destroy_user_session_path, method: :delete
