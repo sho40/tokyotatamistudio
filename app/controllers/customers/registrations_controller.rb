@@ -78,7 +78,7 @@ class Customers::RegistrationsController < Devise::RegistrationsController
 
   def customer_params
     params.require(:customer).permit(
-      :name, :tel, :email, :postcode, :prefecture_code, :address_city,
+      :name, :tel, :email, :postcode, :prefecture_name, :address_city,
       :address_street, :address_building, :password, :password_confirmation,
       :encrypted_password,
       :reset_password_token, :reset_password_sent_at 
