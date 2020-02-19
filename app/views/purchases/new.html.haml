@@ -2,9 +2,13 @@
 %br/
 %br/
 - @cart_items.each do |i|
-  .item_name
-    = i.product.name
-    = i.product.price
+  .items
+    = "商品名 : #{i.product.name}"
+    %br/
+    = "価格: ¥#{i.product.price} × 個数: #{i.quantity} = ¥#{i.product.price * i.quantity}"
+    %p -------------------------------
+  .items__total
+    
 %br/
 %br/
 = current_customer.name
