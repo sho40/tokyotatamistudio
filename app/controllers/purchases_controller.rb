@@ -2,10 +2,10 @@ class PurchasesController < ApplicationController
   before_action :authenticate_customer!
   before_action :setup_cart_item!
 
-  def new
+  def index
     @cart_items = current_cart.cart_items
-    
   end
+
 
   private
 

@@ -1,18 +1,32 @@
 購入確認
 %br/
 %br/
+- @sum = 0
 - @cart_items.each do |i|
   .items
     = "商品名 : #{i.product.name}"
     %br/
     = "価格: ¥#{i.product.price} × 個数: #{i.quantity} = ¥#{i.product.price * i.quantity}"
     %p -------------------------------
-  .items__total
+    - @sum += (i.product.price * i.quantity)
+.items__total
+  = "合計金額 : ¥#{@sum}"
     
 %br/
+名前
 %br/
 = current_customer.name
-%br
-= current_customer.prefecture_name
-
+%br/
+%br/
+住所
+%br/
+= current_customer.prefecture_code
+= current_customer.address_city
+= current_customer.address_street
+= current_customer.address_building
+%br/
+%br/
+= link_to "クレジットカード決済をする"
+%br/
+%br/
 = link_to "ログアウト", destroy_user_session_path, method: :delete

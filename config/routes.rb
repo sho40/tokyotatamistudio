@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post '/update_item' => 'carts#update_item'
   delete '/delete_item' => 'carts#delete_item'
 
-  resources :purchases, only: [:new]
+  resources :purchases, only: [:index]
 
 
 end
