@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery :expect => [:delete_item]
 
   helper_method :current_cart
 
@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     else
       @cart = Cart.create
       session[:cart_id] = @cart.id
+      @cart
     end
   end
 end

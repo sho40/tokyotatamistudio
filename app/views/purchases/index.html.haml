@@ -1,0 +1,36 @@
+購入確認
+%br/
+%br/
+- @sum = 0
+- @cart_items.each do |i|
+  .items
+    = "商品名 : #{i.product.name}"
+    %br/
+    = "価格: ¥#{i.product.price} × 個数: #{i.quantity} = ¥#{i.product.price * i.quantity}"
+    %p -------------------------------
+    - @sum += (i.product.price * i.quantity)
+.items__total
+  = "合計金額 : ¥#{@sum}"
+    
+%br/
+名前
+%br/
+= current_customer.name
+%br/
+%br/
+住所
+%br/
+= current_customer.prefecture_code
+= current_customer.address_city
+= current_customer.address_street
+= current_customer.address_building
+%br/
+%br/
+-# = form_tag(action: :pay, methot: :post) do
+-#   %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
+= form_with local: true, url: purchases_pay_path do |form|
+  = form.hidden_field :amount, value: @sum
+  %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
+%br/
+%br/
+= link_to "ログアウト", destroy_user_session_path, method: :delete

@@ -21,8 +21,8 @@ class CartsController < ApplicationController
   end
 
   def delete_item
-    @cart_item = CartItem.find(params[:item_id])
-    @cart_item.destroy
+    @delete_item = CartItem.find(params[:item_id])
+    @delete_item.destroy
   end
 
   private
