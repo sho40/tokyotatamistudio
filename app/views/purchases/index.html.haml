@@ -26,7 +26,11 @@
 = current_customer.address_building
 %br/
 %br/
-= link_to "クレジットカード決済をする"
+-# = form_tag(action: :pay, methot: :post) do
+-#   %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
+= form_with local: true, url: purchases_pay_path do |form|
+  = form.hidden_field :amount, value: @sum
+  %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
 %br/
 %br/
 = link_to "ログアウト", destroy_user_session_path, method: :delete
