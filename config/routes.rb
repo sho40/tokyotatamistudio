@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   }
   root to: 'products#index'
 
+  resources :homes, only: [:index]
+
   resources :products
 
   resources :carts, only: [:show]
