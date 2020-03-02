@@ -5,6 +5,12 @@
         .header__main__content__logo
           = link_to "東京畳工房", root_path
         .header__main__content__menu
+          .header__main__content__menu__products
+            = link_to "商品一覧", products_path, class: 'header__main__content__menu__products--link'
+            = link_to "畳レンタル"
+            = link_to "私たちについて"
     .header__right
+      .header__right__contact
+        = link_to "お問い合わせ"
   .content
   .footer
