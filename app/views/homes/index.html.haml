@@ -3,14 +3,22 @@
     .header__main
       .header__main__content
         .header__main__content__logo
-          = link_to "東京畳工房", root_path
+          = link_to "東京畳工房", root_path, id: 'header-font'
         .header__main__content__menu
-          .header__main__content__menu__products
-            = link_to "商品一覧", products_path, class: 'header__main__content__menu__products--link'
-            = link_to "畳レンタル"
-            = link_to "私たちについて"
+          #menu.header__main__content__menu__products
+            = link_to "商品一覧", products_path, class: 'header__main__content__menu__products--link', id: 'header-font'
+          #menu.header__main__content__menu__rental
+            = link_to "畳レンタル", {},id: 'header-font'
+          #menu.header__main__content__menu__about-us
+            = link_to "私たちについて", {}, id: 'header-font'
     .header__right
       .header__right__contact
-        = link_to "お問い合わせ"
+        = link_to "お問い合わせ", {},id: 'header-font',class: 'header__right__contact__text'
+
+  .home-image
+    = image_tag('home1.jpg', alt: "home-image1", id: "home-img")
+
   .content
+
   .footer
+    
