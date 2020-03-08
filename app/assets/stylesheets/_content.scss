@@ -1,11 +1,46 @@
+.wrapper {
+  background: linear-gradient(-45deg,rgba(34, 125, 81, .8), rgba(246, 255, 0, .1));
+}
+
 .content {
   padding: 100px 50px 0;
   &__main {
     &__image {
+      margin: 10px;
 
     }
     &__text {
-      padding: 15px;
+      padding: 35px;
+      height: 45vh;
+      width: 100%;
+    }
+    &__links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      #home-links-images {
+        height: 550px;
+        width: 50%;
+        margin: 10px;
+      }
+    }
+    &__about-us {
+      height: 550px;
+      margin: 10px;
+    }
+    &__contact {
+      margin: 120px 10px;
+      height: 330px;
+      background-image: url('tatami-products.jpg');
+      background-size: 115% auto;
+      background-position: center;
+      &__text {
+        padding-top: 120px;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: large;
+      }
     }
   }
 }
