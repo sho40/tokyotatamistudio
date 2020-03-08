@@ -3,8 +3,65 @@
     .header__main
       .header__main__content
         .header__main__content__logo
-          = link_to "東京畳工房", root_path
+          = link_to "東京畳工房", root_path, class: 'header__main__content__logo__top',id: 'header-font'
+          = link_to "Tokyo Tatami Studio", root_path, class: 'header__main__content__logo__bottom',id: 'header-font'
         .header__main__content__menu
+          #menu.header__main__content__menu__products
+            = link_to "商品一覧", products_path, class: 'header__main__content__menu__products--link', id: 'header-font'
+          #menu.header__main__content__menu__rental
+            = link_to "畳レンタル", {},id: 'header-font'
+          #menu.header__main__content__menu__about-us
+            = link_to "私たちについて", {}, id: 'header-font'
     .header__right
+      .header__right__contact
+        = link_to "お問い合わせ", {},id: 'header-font',class: 'header__right__contact__text'
+
+  .home-image
+    #home-img
+
   .content
+    .content__main
+      .content__main__image
+        = image_tag('product2.jpg', class: 'content-top-img')
+      .content__main__text
+        %p お客様の心に安らぎをあたえられる。 
+        %p 任せて安心の畳屋を目指しております。
+      .content__main__links
+        #home-links-images.content__main__links__products
+          = image_tag('product1.jpg', id: "home-links-img")
+        #home-links-images.content__main__links__rental
+          = image_tag('rental1.jpg', id: "home-links-img")
+      .content__main__about-us
+        = image_tag('IMG_8764.jpg', id: "home-links-img")
+      .content__main__contact
+        .content__main__contact__text
+          %p お問い合わせはこちら
+          %p ---
+          %p contact
+  
   .footer
+    .footer__content
+      .footer__content__left
+        .footer__content__left__title
+          %p.footer__content__left__title__top#footer-font 東京畳工房 / Tokyo Tatami Studio
+        .footer__content__left__info
+          .footer__content__left__info__address
+            .footer__content__left__info__address__text
+              = "〒197-0011 東京都福生市福生2457-6"
+            .footer__content__left__info__address__map-btn
+              = button_to "map open", {},class: 'footer__content__left__info__address__map-btn__text'
+          .footer__content__left__info__tel
+            = "TEL 090-3538-6885"
+          .footer__content__left__info__open
+            = "○営業時間 9:00 ~ 17:00 ※土日祝定休"
+      .footer__content__right
+        .footer__content__right__logo
+          = link_to "東京畳工房", root_path, class: 'footer__content__right__logo__top', id: 'footer-font'
+          = link_to "Tokyo Tatami Studio", root_path, class: 'footer__content__right__logo__bottom', id: 'footer-font'
+        .footer__content__right__mail
+          = "ando_3041@yahoo.co.jp"
+
+        
+
+
+    

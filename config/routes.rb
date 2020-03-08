@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     registrations: 'customers/registrations',
     sessions: "customers/sessions",
   }
-  root to: 'products#index'
+  root to: 'homes#index'
 
   resources :homes, only: [:index]
 
