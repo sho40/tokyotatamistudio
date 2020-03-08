@@ -9,12 +9,6 @@
     src: url('fonts/KouzanMouhituFontOTF.otf');
   }
 
-  .wrapper {
-    background:rgba(134, 193, 102, 1);
-    width: 100vw;
-    height: 92vh;
-  }
-
   .header {
     width: 100%;
     position: fixed;
@@ -29,9 +23,17 @@
         display: flex;
         justify-content: space-between;
         &__logo {
-          font-family: 'mouhitu';
-          font-size: 45px;
-          line-height: 90px;
+          display: block;
+          width: 225px;
+          padding-top: 10px;
+          &__top {
+            font-family: 'mouhitu';
+            font-size: 45px;
+          }
+          &__bottom {
+            font-size: 15px;
+            padding-left: 15px;
+          }
 
         }
         &__menu {
