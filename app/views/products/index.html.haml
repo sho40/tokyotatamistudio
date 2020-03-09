@@ -1,20 +1,11 @@
-.pruducts-header
-  .pruducts-header__content
-    .pruducts-header__content__left
-      .pruducts-header__content__left__logo
-        = link_to "東京畳工房", root_path, class: 'pruducts-header__content__left__logo__top',id: 'products-header-font'
-        = link_to "Tokyo Tatami Studio", root_path, class: 'pruducts-header__content__left__logo__bottom',id: 'products-header-font'
-
-    .pruducts-header__content__right
-      .pruducts-header__content__right__cart
-        %i.fas.fa-shopping-cart.fa-2x.cart-color
-      .pruducts-header__content__right__sum
+= render 'shared/products-header'
 .products-content
   .products-content__main
     .products-content__main__items
       - @products.each do |p|
         .products-content__main__items__box
-          = image_tag(p.image.url, class: 'products-content__main__items__box__image')
+          = link_to product_path(p.id) do
+            = image_tag(p.image.url, class: 'products-content__main__items__box__image')
           .products-content__main__items__box__name
             = p.name
           .products-content__main__items__box__price
