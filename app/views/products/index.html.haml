@@ -1,12 +1,36 @@
-- @products.each do |p|
-  .content
-    = p.name
-    = image_tag(p.image.url)
-    = p.text
-    = p.price
-    = p.category.name
-    = form_with model: @cart_item, url: add_item_path do |f|
-      = f.label '個数'
-      = f.number_field :quantity
-      = f.hidden_field :product_id, value: p.id
-      = f.submit :"カートに追加"
+.pruducts-header
+  .pruducts-header__content
+    .pruducts-header__content__left
+      .pruducts-header__content__left__logo
+        = link_to "東京畳工房", root_path, class: 'pruducts-header__content__left__logo__top',id: 'products-header-font'
+        = link_to "Tokyo Tatami Studio", root_path, class: 'pruducts-header__content__left__logo__bottom',id: 'products-header-font'
+
+    .pruducts-header__content__right
+      .pruducts-header__content__right__cart
+        %i.fas.fa-shopping-cart.fa-2x.cart-color
+      .pruducts-header__content__right__sum
+.products-content
+  .products-content__main
+    .products-content__main__items
+      - @products.each do |p|
+        .products-content__main__items__box
+          = image_tag(p.image.url, class: 'products-content__main__items__box__image')
+          .products-content__main__items__box__name
+            = p.name
+          .products-content__main__items__box__price
+            = "¥#{p.price}"
+            -# = p.name
+            -# = p.text
+            -# = p.price
+            -# = p.category.name
+            -# = form_with model: @cart_item, url: add_item_path do |f|
+            -#   = f.label '個数'
+            -#   = f.number_field :quantity
+            -#   = f.hidden_field :product_id, value: p.id
+            -#   = f.submit :"カートに追加"
+= render 'shared/footer'
+
+
+
+
+  
