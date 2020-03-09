@@ -1,0 +1,46 @@
+#products-header-font {
+  text-decoration: none;
+  color: #666666;
+}
+
+.icon::before {
+	content:'\f07a';
+	font-family:'Font Awesome 5 Free';
+	font-weight:900;
+}
+
+.cart-color {
+  color: rgb(247, 92, 47);
+}
+
+
+.pruducts-header {
+  position: fixed;
+  width: 100%;
+  padding-top: 20px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      margin-left: 30px;
+      &__logo {
+        display: block;
+        width: 225px;
+        font-weight: bold;
+        padding-top: 10px;
+        &__top {
+          font-family: 'mouhitu';
+          font-size: 45px;
+        }
+        &__bottom {
+          font-size: 15px;
+          padding-left: 15px;
+        }
+      }
+    }
+    &__right {
+      margin: 30px 40px 0 0;
+    }
+
+  }
+}
