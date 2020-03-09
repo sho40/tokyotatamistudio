@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :homes, only: [:index]
 
-  resources :products
+  resources :products, only: [:index, :show]
 
   resources :carts, only: [:show]
 
