@@ -1,12 +1,27 @@
-- @products.each do |p|
-  .content
-    = p.name
-    = image_tag(p.image.url)
-    = p.text
-    = p.price
-    = p.category.name
-    = form_with model: @cart_item, url: add_item_path do |f|
-      = f.label '個数'
-      = f.number_field :quantity
-      = f.hidden_field :product_id, value: p.id
-      = f.submit :"カートに追加"
+= render 'shared/products-header'
+.products-content
+  .products-content__main
+    .products-content__main__items
+      - @products.each do |p|
+        .products-content__main__items__box
+          = link_to product_path(p.id) do
+            = image_tag(p.image.url, class: 'products-content__main__items__box__image')
+          .products-content__main__items__box__name
+            = p.name
+          .products-content__main__items__box__price
+            = "¥#{p.price}"
+            -# = p.name
+            -# = p.text
+            -# = p.price
+            -# = p.category.name
+            -# = form_with model: @cart_item, url: add_item_path do |f|
+            -#   = f.label '個数'
+            -#   = f.number_field :quantity
+            -#   = f.hidden_field :product_id, value: p.id
+            -#   = f.submit :"カートに追加"
+= render 'shared/footer'
+
+
+
+
+  
