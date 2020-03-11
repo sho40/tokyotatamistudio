@@ -1,5 +1,30 @@
 = render 'shared/products-header'
-.products-show-content
-  .products-show-content
+.product-show-content
+  .product-show-content__main
+  .product-show-content__main__title
+    = @product.name
+  .product-show-content__main__images
+    .product-show-content__main__images__left
+      .product-show-content__main__images__left__main-image
+        = image_tag(@product.image.url, class: 'products-content__main__items__box__image')
+    .product-show-content__main__images__right
+      .product-show-content__main__images__right__sub-images
+        .product-show-content__main__images__right__sub-image
+  .product-show-content__main__bottom
+    .product-show-content__main__bottom__left
+      = @product.text
+      .product-show-content__main__bottom__left__text
+    .product-show-content__main__bottom__right
+      .product-show-content__main__bottom__right__price
+        = @product.price
+      .product-show-content__main__bottom__right__attention
+      .product-show-content__main__bottom__right__add-cart
+        = form_with model: @cart_item, url: add_item_path do |f|
+          .product-show-content__main__bottom__right__add-cart__sum
+            = f.label '個数'
+            = f.number_field :quantity
+          .product-show-content__main__bottom__right__add-cart__btn
+            = f.hidden_field :product_id, value: @product.id
+            = f.submit :"カートに追加"
 = render 'shared/footer'
 
