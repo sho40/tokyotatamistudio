@@ -1,0 +1,95 @@
+.product-show-content {
+  margin-top: 100px;
+  width: 100%;
+  &__main {
+    padding-top: 70px;
+    width: 780px;
+    margin: 0 auto;
+    &__title {
+      font-family: Arial,Helvetica Neue,Helvetica,ヒラギノ角ゴ Pro W3,sans-serif; -moz-osx-font-smoothing: grayscale;
+      margin-bottom: 30px;
+      font-size: 26px;
+      border-bottom: dashed 1px #928888;
+      padding: 0 0 12px;
+    }
+    &__images {
+      margin-bottom: 55px;
+      display: flex;
+      &__left {
+        &__main-image {
+          width: 500px;
+          height: 334px;
+          object-fit: cover;
+        }
+      }
+      &__right {
+        height: 100%;
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      &__left {
+        margin-left: 0;
+        &__text {
+          font-size: 15px;
+          color: #696969;
+        }
+      }
+      &__right {
+        width: 260px;
+        &__price {
+          font-size: 1.6em;
+          padding: 0 0 3px;
+          text-align: right;
+          font-weight: 100;
+          border-bottom: 1px solid #e0e0dd;
+        }
+        &__attention {
+          font-size: 12px;
+          color: #696969;
+          margin: 10px 0;
+          &__link {
+            color: #111111;
+          }
+        }
+        &__add-cart {
+          margin-top: 20px;
+          &__sum label {
+            font-size: 16ox;
+            color: #696969;
+          }
+          &__sum input {
+            border-radius: 5px;
+            width: 30%;
+            border: 1px solid #d6cdcd;
+          }
+          &__bottom {
+            margin-top: 35px;
+            &__btn  {
+              display:block;
+              width: 100%;
+              height: 45px;
+              line-height: 45px;
+              color: #696969;
+              text-decoration: none;
+              text-align: center;
+              background-color: #fff;
+              border-radius: 5px;
+              border-color: #666;
+              -webkit-transition: all 0.5s;
+              transition: all 0.5s;
+              cursor: pointer;
+              font-size: 0.8em;
+            }
+            &__btn:hover{
+              background-color: #222;
+              color: #d6cdcd;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

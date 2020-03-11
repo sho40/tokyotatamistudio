@@ -1,5 +1,33 @@
 = render 'shared/products-header'
-.products-show-content
-  .products-show-content
+.product-show-content
+  .product-show-content__main
+    .product-show-content__main__title
+      = @product.name
+    .product-show-content__main__images
+      .product-show-content__main__images__left
+        = image_tag(@product.image.url, class: 'product-show-content__main__images__left__main-image')
+      .product-show-content__main__images__right
+        .product-show-content__main__images__right__sub-images
+          .product-show-content__main__images__right__sub-image
+    .product-show-content__main__bottom
+      .product-show-content__main__bottom__left
+        .product-show-content__main__bottom__left__text
+          = @product.text
+      .product-show-content__main__bottom__right
+        .product-show-content__main__bottom__right__price
+          = "¥#{@product.price}"
+        .product-show-content__main__bottom__right__attention
+          = "※こちらの価格には消費税が含まれています。"
+          %br/
+          = "※送料は別途発生いたします。詳細は"
+          = link_to "こちら", 'http://www.kuronekoyamato.co.jp/ytc/search/estimate/ichiran.html', class: 'product-show-content__main__bottom__right__attention__link'
+        .product-show-content__main__bottom__right__add-cart
+          = form_with model: @cart_item, url: add_item_path do |f|
+            .product-show-content__main__bottom__right__add-cart__sum
+              = f.label '数量'
+              = f.number_field :quantity
+            .product-show-content__main__bottom__right__add-cart__bottom
+              = f.hidden_field :product_id, value: @product.id
+              = f.submit :"カートに追加", class: 'product-show-content__main__bottom__right__add-cart__bottom__btn'
 = render 'shared/footer'
 

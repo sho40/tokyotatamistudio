@@ -1,11 +1,12 @@
-.pruducts-header
-  .pruducts-header__content
-    .pruducts-header__content__left
-      .pruducts-header__content__left__logo
-        = link_to "東京畳工房", root_path, class: 'pruducts-header__content__left__logo__top',id: 'products-header-font'
-        = link_to "Tokyo Tatami Studio", root_path, class: 'pruducts-header__content__left__logo__bottom',id: 'products-header-font'
+.products-header
+  .products-header__content
+    .products-header__content__left
+      .products-header__content__left__logo
+        = link_to "東京畳工房", root_path, class: 'products-header__content__left__logo__top',id: 'products-header-font'
+        = link_to "Tokyo Tatami Studio", root_path, class: 'products-header__content__left__logo__bottom',id: 'products-header-font'
 
-    .pruducts-header__content__right
-      .pruducts-header__content__right__cart
-        %i.fas.fa-shopping-cart.fa-2x.cart-color
-      .pruducts-header__content__right__sum
+    .products-header__content__right
+      .products-header__content__right__cart
+        = link_to("#{cart_path(current_cart.id)}") do
+          %i.fas.fa-shopping-cart.fa-2x.cart-color
+      .products-header__content__right__sum
