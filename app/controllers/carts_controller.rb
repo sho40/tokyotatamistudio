@@ -12,7 +12,7 @@ class CartsController < ApplicationController
 
     @cart_item.quantity += params[:quantity].to_i
     @cart_item.save
-    redirect_back(fallback_location: product_path(id: params[:product_id]))
+    redirect_to current_cart
   end
 
   def update_item
