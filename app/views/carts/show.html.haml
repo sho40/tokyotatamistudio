@@ -8,6 +8,17 @@
     .cart-content__main__products-link
       .cart-content__main__products-link__btn
         = link_to "買い物を続ける", products_path, class: 'cart-content__main__products-link__btn__text'
+    .cart-content__main__current-cart
+      .cart-content__main__current-cart__title
+        %p.cart-content__main__current-cart__title__font カートの中身
+      .cart-content__main__current-cart__box
+        .cart-content__main__current-cart__box__top
+          %p.cart-content__main__current-cart__box__top__name 商品名
+          %p.cart-content__main__current-cart__box__top__price 値段
+          %p.cart-content__main__current-cart__box__top__sum 個数
+          %p.cart-content__main__current-cart__box__top__subtotal 小計
+        .cart-content__main__current-cart__box__middle
+        .cart-content__main__current-cart__box__bottom
 
 - @cart_items.each do |i|
   .cart_content{"item-id": "#{i.id}"}
