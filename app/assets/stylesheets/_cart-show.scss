@@ -71,17 +71,68 @@
         }
       }
       &__box {
-        width: 100%;
         margin: 14px 18px;
         &__top {
           border-bottom: #dbdbdb solid 2px;
-          margin-right: 36px;
           padding-bottom: 7px;
           display: flex;
           font-size: 14px;
           &__name {
             width: 40%;
-
+          }
+          &__price {
+            text-align: right;
+            width: 20%;
+          }
+          &__sum {
+            text-align: right;
+            width: 20%;
+          }
+          &__subtotal {
+            text-align: right;
+            width: 20%;
+          }
+        }
+        &__middle {
+          &__product {
+            border-bottom: #dbdbdb solid 2px;
+            padding-bottom: 7px;
+            display: flex;
+            font-size: 14px;
+            &__title {
+              width: 40%;
+              display: flex;
+              &__name {
+                font-weight: bold;
+                line-height: 140px;
+              }
+              &__image {
+                height: 83px;
+                width: 125px;
+                object-fit: cover;
+                margin: 30px 0 0 40px;
+              }
+            }
+            &__price {
+              width: 20%;
+              line-height: 140px;
+              text-align: right;
+            }
+            &__sum {
+              width: 20%;
+              padding-top: 60px;
+              &__quantity {
+                text-align: right;
+              }
+              &__edit {
+                display: block;
+                &__change {
+                  &__field {
+                    width: 40%;
+                  }
+                }
+              }
+            }
           }
         }
       }
