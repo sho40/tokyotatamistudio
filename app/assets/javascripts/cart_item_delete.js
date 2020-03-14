@@ -1,6 +1,6 @@
 $(document).on('turbolinks:load' , function(){
   $(function(){
-    $('.cart-content__main__current-cart__box__middle__product__sum__delete_btn').on('click', function(){
+    $('.cart-content__main__current-cart__box__middle__product__sum__edit__delete-btn').on('click', function(){
       var deleteConfirm = confirm('カートから削除しますか？');
 
       if(deleteConfirm == true) {
@@ -16,6 +16,7 @@ $(document).on('turbolinks:load' , function(){
 
         .done(function(){
           clickEle.parent().parent().parent().remove();
+          window.location.reload(true);
         })
 
         .fail(function(){
