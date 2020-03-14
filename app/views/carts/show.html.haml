@@ -33,10 +33,28 @@
                   = form_with model: @cart_item, url: update_item_path, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change' do |item|
                     = item.number_field :quantity, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__field'
                     = item.hidden_field :product_id, value: i.product_id
-                    = item.submit :"変更", class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__btn'
-                  .cart-content__main__current-cart__box__middle__product__sum__edit__delete_btn 削除
-              .cart-content__main__current-cart__box__middle__
+                    = item.submit :"数量変更", class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__btn'
+                  .cart-content__main__current-cart__box__middle__product__sum__edit__delete-btn 削除
+              .cart-content__main__current-cart__box__middle__product__subtotal
+                = "¥#{i.product.price * i.quantity}"
         .cart-content__main__current-cart__box__bottom
+          .cart-content__main__current-cart__box__bottom__products
+            .cart-content__main__current-cart__box__bottom__products__title 商品
+            .cart-content__main__current-cart__box__bottom__products__price 
+              = @total.sum
+          .cart-content__main__current-cart__box__bottom__shipping-fee
+            .cart-content__main__current-cart__box__bottom__shipping-fee__title 送料
+            .cart-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
+          .cart-content__main__current-cart__box__bottom__total
+            .cart-content__main__current-cart__box__bottom__total__box
+              .cart-content__main__current-cart__box__bottom__total__box__left
+                = "合計 :" 
+              .cart-content__main__current-cart__box__bottom__total__box__right
+                = "¥ #{@total.sum}"
+
+    = link_to "購入確認へ", purchases_path, class: 'purchase_confarm_btn'
+
+
 
 
 
