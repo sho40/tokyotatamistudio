@@ -8,7 +8,7 @@ class Customers::RegistrationsController < Devise::RegistrationsController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      redirect_to new_purchase_path
+      redirect_to purchases_path
     else
       render :new
     end
