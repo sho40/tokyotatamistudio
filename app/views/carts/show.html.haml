@@ -5,9 +5,6 @@
       = link_to "Tokyo Tatami Studio", root_path, class: 'cart-header__content__logo__bottom', id: 'cart-header-font'
 .cart-content
   .cart-content__main
-    .cart-content__main__products-link
-      .cart-content__main__products-link__btn
-        = link_to "買い物を続ける", products_path, class: 'cart-content__main__products-link__btn__text'
     .cart-content__main__current-cart
       .cart-content__main__current-cart__title
         %p.cart-content__main__current-cart__title__font カートの中身
@@ -51,29 +48,14 @@
                 = "合計 :" 
               .cart-content__main__current-cart__box__bottom__total__box__right
                 = "¥ #{@total.sum}"
+    .cart-content__main__links
 
-    = link_to "購入確認へ", purchases_path, class: 'purchase_confarm_btn'
+      .cart-content__main__links__products-link
+        = link_to "買い物を続ける", products_path, class: 'cart-content__main__links__products-link__btn'
+      .cart-content__main__links__purchase-link
+        = link_to "購入確認へ", purchases_path, class: 'cart-content__main__links__purchase-link__btn'
+  = render 'shared/footer'
 
-
-
-
-
-
--# - @cart_items.each do |i|
--#   .cart_content{"item-id": "#{i.id}"}
--#     = i.product.category.name
--#     = i.product.name
--#     = image_tag(i.product.image.url)
--#     = i.product.price
--#     %p 個数
--#     = i.quantity
--#     = form_with model: @cart_item, url: update_item_path do |item|
--#       = item.number_field :quantity
--#       = item.hidden_field :product_id, value: i.product_id
--#       = item.submit :"個数変更"
--#     .delete_btn 削除
-
--# = link_to "購入確認へ", purchases_path, class: 'purchase_confarm_btn'
 
 
 
