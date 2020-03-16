@@ -1,56 +1,68 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :name
-    %br/
-    = f.text_field :name, autocomplete: "name"
-  .field
-    = f.label :tel_number
-    %br/
-    = f.number_field :tel, autocomplete: "tel"
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-
-  .field
-    = f.label :postcode
-    %br/
-    = f.number_field :postcode
-
-  .field
-    = f.label :prefecture_code
-    %br/
-    = f.text_field :prefecture_code,collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県'
-
-  .field
-    = f.label :address_city
-    %br/
-    = f.text_field :address_city
-
-  .field
-    = f.label :address_street
-    %br/
-    = f.text_field :address_street
-
-  .field
-    = f.label :address_building
-    %br/
-    = f.text_field :address_building
-
-
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
+#account-page.account-page
+  .account-page__inner.clearfix
+    .account-page__inner--left.account-page__header
+      %h2 Create Account
+      %h5 新規アカウントの作成
+      = render "devise/shared/links"
+    .account-page__inner--right.user-form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          .field-label
+            = f.label :name
+          .field-input
+            = f.text_field :name, autocomplete: "name"
+        .field
+          .field-label
+            = f.label :tel_number
+          .field-input
+            = f.number_field :tel, autocomplete: "tel"
+        .field
+          .field-label
+            = f.label :email
+          .field-input
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          .field-label
+            = f.label :postcode
+          .field-input
+            = f.number_field :postcode
+        .field
+          .field-label
+            = f.label :prefecture_code
+          .field-input
+            = f.text_field :prefecture_code,collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県'
+        .field
+          .field-label
+            = f.label :address_city
+          .field-input
+            = f.text_field :address_city
+        .field
+          .field-label
+            = f.label :address_street
+          .field-input
+            = f.text_field :address_street
+        .field
+          .field-label
+            = f.label :address_building
+          .field-input
+            = f.text_field :address_building
+        .field
+          .field-label
+            = f.label :password
+            %i (英数字#{@minimum_password_length}文字以上)
+          .field-input
+            - if @minimum_password_length
+              %em
+            %br/
+            = f.password_field :password, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :password_confirmation
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+        .actions
+          = f.submit "Create Account", class: 'btn'
 = render "customers/shared/links"
+
+
