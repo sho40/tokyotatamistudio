@@ -5,7 +5,26 @@
       .confarm-content__main__customer__title
         .confarm-content__main__customer__title__font 購入者情報の確認
       .confarm-content__main__customer__box
-      
+        .confarm-content__main__customer__box__title 購入者情報
+      .confarm-content__main__customer__box__basic-information
+        .confarm-content__main__customer__box__basic-information__left
+          .confarm-content__main__customer__box__basic-information__left__title 基本情報
+          .confarm-content__main__customer__box__basic-information__left__informations
+            #confarm-content__main__customer__box__basic-information__left__informations__parts
+              = current_customer.name
+            #confarm-content__main__customer__box__basic-information__left__informations__parts
+              = current_customer.postcode
+            #confarm-content__main__customer__box__basic-information__left__informations__parts
+              = current_customer.prefecture_code
+              = current_customer.address_city
+              = current_customer.address_street
+              = current_customer.address_building
+            #confarm-content__main__customer__box__basic-information__left__informations__parts
+              = current_customer.tel
+        .confarm-content__main__customer__box__basic-information__right
+          .confarm-content__main__customer__box__basic-information__right__update-btn
+
+
 
 
 
