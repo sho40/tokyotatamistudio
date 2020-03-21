@@ -4,6 +4,12 @@ class PurchasesController < ApplicationController
 
   def index
     @cart_items = current_cart.cart_items
+    @cart_items = current_cart.cart_items
+    @total = []
+    @cart_items.each do |item|
+      @subtotal = item.product.price * item.quantity
+      @total << @subtotal
+    end
   end
 
   def pay
