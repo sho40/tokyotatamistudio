@@ -75,7 +75,9 @@
       .confarm-content__main__purchase__purchase-link
         .confarm-content__main__purchase__purchase-link__btn
           = form_with local: true, url: purchases_pay_path do |form|
-            = form.hidden_field :amount, value: @sum
+            = form.hidden_field :amount, value: @total.sum
+            = form.hidden_field :cart_id, value: current_cart.id
+            = form.hidden_field :customer_id, value: current_customer.id
             %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
  
 = render 'shared/footer'
