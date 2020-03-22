@@ -44,15 +44,9 @@
                 = image_tag(i.product.image.url, class: 'cart-content__main__current-cart__box__middle__product__title__image')
               .confarm-content__main__current-cart__box__middle__product__price
                 = "¥#{i.product.price}"
-              .confarm-content__main__current-cart__box__middle__product__sum
+              #confarm-view-product-quantity
                 .confarm-content__main__current-cart__box__middle__product__sum__quantity
                   = "現在の数量 : #{i.quantity}"
-                .confarm-content__main__current-cart__box__middle__product__sum__edit
-                  = form_with model: @cart_item, url: update_item_path, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change' do |item|
-                    = item.number_field :quantity, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__field'
-                    = item.hidden_field :product_id, value: i.product_id
-                    = item.submit :"数量変更", class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__btn'
-                  .confarm-content__main__current-cart__box__middle__product__sum__edit__delete-btn 削除
               .confarm-content__main__current-cart__box__middle__product__subtotal
                 = "¥#{i.product.price * i.quantity}"
         .confarm-content__main__current-cart__box__bottom
