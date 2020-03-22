@@ -4,6 +4,8 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  belongs_to :purchase
+
   include JpPrefecture
   jp_prefecture :prefecture_code
   

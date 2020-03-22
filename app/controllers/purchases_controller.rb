@@ -19,6 +19,7 @@ class PurchasesController < ApplicationController
       card: params['payjp-token'],
       currency: 'jpy'
     )
+    purchase = Purchase.create(purchase_params)
   end
 
 
@@ -26,6 +27,12 @@ class PurchasesController < ApplicationController
 
   def setup_cart_item!
     @cart_item = current_cart.cart_items.find_by(product_id: params[:product_id])
+  end
+
+  def purchase_params
+    params.permit(
+      :amount, :cart_id, :customer_id
+    )
   end
 
 
