@@ -10,21 +10,25 @@
           .confarm-content__main__customer__box__basic-information__left
             .confarm-content__main__customer__box__basic-information__left__title 基本情報
             .confarm-content__main__customer__box__basic-information__left__informations
-              #confarm-content__main__customer__box__basic-information__left__informations__parts
+              #confarm-informations-parts
                 = current_customer.name
-              #confarm-content__main__customer__box__basic-information__left__informations__parts
-                = current_customer.postcode
-              #confarm-content__main__customer__box__basic-information__left__informations__parts
+              #confarm-informations-parts
+                = "〒#{current_customer.postcode}"
+                %br/
                 = current_customer.prefecture_code
                 = current_customer.address_city
                 = current_customer.address_street
                 = current_customer.address_building
-              #confarm-content__main__customer__box__basic-information__left__informations__parts
+              #confarm-informations-parts
                 = current_customer.tel
-              #confarm-content__main__customer__box__basic-information__left__informations__parts
-                = current_customer.email
           .confarm-content__main__customer__box__basic-information__right
-            .confarm-content__main__customer__box__basic-information__right__update-btn
+            = link_to "変更", edit_customer_path(current_customer.id), class: 'confarm-content__main__customer__box__basic-information__right__update-btn'
+        .confarm-content__main__customer__box__email
+          .confarm-content__main__customer__box__email__left
+            .confarm-content__main__customer__box__email__left__title メールアドレス
+            .confarm-content__main__customer__box__email__left__registraited-address
+              = current_customer.email
+          .confarm-content__main__customer__box__email__right
 
     .confarm-content__main__current-cart
       .confarm-content__main__current-cart__title
