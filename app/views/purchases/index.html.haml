@@ -21,14 +21,10 @@
                 = current_customer.address_building
               #confarm-informations-parts
                 = current_customer.tel
+              #confarm-informations-parts
+                = current_customer.email
           .confarm-content__main__customer__box__basic-information__right
             = link_to "変更", edit_customer_path(current_customer.id), class: 'confarm-content__main__customer__box__basic-information__right__update-btn'
-        .confarm-content__main__customer__box__email
-          .confarm-content__main__customer__box__email__left
-            .confarm-content__main__customer__box__email__left__title メールアドレス
-            .confarm-content__main__customer__box__email__left__registraited-address
-              = current_customer.email
-          .confarm-content__main__customer__box__email__right
 
     .confarm-content__main__current-cart
       .confarm-content__main__current-cart__title
@@ -71,12 +67,12 @@
       .confarm-content__main__purchase__cart-link
         = link_to "カートに戻る", cart_path(current_cart.id), class: 'confarm-content__main__purchase__cart-link__btn'
       .confarm-content__main__purchase__purchase-link
-        .confarm-content__main__purchase__purchase-link__btn
-          = form_with local: true, url: purchases_pay_path do |form|
-            = form.hidden_field :amount, value: @total.sum
-            = form.hidden_field :cart_id, value: current_cart.id
-            = form.hidden_field :customer_id, value: current_customer.id
-            %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
+        = form_with local: true, url: purchases_pay_path do |form|
+          = form.hidden_field :amount, value: @total.sum
+          = form.hidden_field :cart_id, value: current_cart.id
+          = form.hidden_field :customer_id, value: current_customer.id
+          = form.button "カード決済をする", class: 'confarm-content__main__purchase__purchase-link__btn'
+          -# %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
  
 = render 'shared/footer'
-= link_to "ログアウト", destroy_user_session_path, method: :delete
+= link_to "ログアウト", destroy_customer_session_path, method: :delete
