@@ -317,7 +317,7 @@
   z-index: 2
 }
 .card-modalWindow {
-  width: 700px;
+  width: 400px;
   background-color: #FFF;
   border: solid 1px;
   border-radius: 5px;
@@ -331,6 +331,7 @@
         font-size: 30px;
         position: absolute;
         padding: 5px 10px;
+        cursor: pointer;
       }
       &__font {
         font-weight: bold;
@@ -342,15 +343,15 @@
       
     }
     &__form {
-      padding: 30px 10px;
+      padding: 30px 20px;
       &__card-logos {
         padding-bottom: 20px;
         border-bottom: solid 1px #6c6c6c;
         display: flex;
         #card-logo {
-          width: 59px;
-          height: 40px;
-          margin-left: 46px;
+          width: 40px;
+          height: 25px;
+          margin-left: 16px;
         }
       }
     }
