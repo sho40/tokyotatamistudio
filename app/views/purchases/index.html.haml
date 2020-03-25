@@ -72,36 +72,50 @@
             = form.hidden_field :amount, value: @total.sum
             = form.hidden_field :cart_id, value: current_cart.id
             = form.hidden_field :customer_id, value: current_customer.id
-            = form.button "カード決済をする", class: 'confarm-content__main__purchase__purchase-link__btn', id: 'charge-submit'
+            = form.button "カード決済をする", class: 'confarm-content__main__purchase__purchase-link__btn', id: 'open-modal'
             -# %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
 
-        #card-overlay
-        .card-modalWindow#card-modalWindow
-          .card-modalWindow__content
-            .card-modalWindow__content__top
-              .card-modalWindow__content__top__close-btn ×
-              .card-modalWindow__content__top__font
-                = "支払い情報"
-            .card-modalWindow__content__form
-              .card-modalWindow__content__form__card-logos
-                .card-modalWindow__content__form__card-logos__master
-                  = image_tag('master-card.png', id: 'card-logo')
-                .card-modalWindow__content__form__card-logos__visa
-                  = image_tag('visa.gif', id: 'card-logo')
-                .card-modalWindow__content__form__card-logos__jcb
-                  = image_tag('jcb.gif', id: 'card-logo')
-                .card-modalWindow__content__form__card-logos__amex
-                  = image_tag('amex.gif', id: 'card-logo')
-                .card-modalWindow__content__form__card-logos__diners
-                  = image_tag('diners.gif', id: 'card-logo')
-                .card-modalWindow__content__form__card-logos__discover
-                  = image_tag('discover.gif', id: 'card-logo')
+            #card-overlay
+            .card-modalWindow#card-modalWindow
+              .card-modalWindow__content
+                .card-modalWindow__content__top
+                  .card-modalWindow__content__top__close-btn ×
+                  .card-modalWindow__content__top__font
+                    = "支払い情報"
+                .card-modalWindow__content__form
+                  .card-modalWindow__content__form__card-logos
+                    .card-modalWindow__content__form__card-logos__master
+                      = image_tag('master-card.png', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__visa
+                      = image_tag('visa.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__jcb
+                      = image_tag('jcb.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__amex
+                      = image_tag('amex.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__diners
+                      = image_tag('diners.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__discover
+                      = image_tag('discover.gif', id: 'card-logo')
 
-              .card-modalWindow__content__form__number
-              .card-modalWindow__content__form__sub
-              .card-modalWindow__content__form__name
-              .card-modalWindow__content__form__submit
-              
+                  .card-modalWindow__content__form__number
+                    %label.card-modalWindow__content__form__number__label カード番号
+                    %input.card-modalWindow__content__form__number__input{type: 'text', name: 'number', maxlength: '16', placeholder: '1234 5678 9012 3456' }
+                  .card-modalWindow__content__form__sub
+                    .card-modalWindow__content__form__sub__wide-field
+                      %label.card-modalWindow__content__form__sub__wide-field__label 有効期限
+                      .card-modalWindow__content__form__sub__wide-field__month
+                        %input.card-modalWindow__content__form__sub__wide-field__month__input{type: 'text', name: 'exp_month', maxlength: '2', placeholder: '月'}
+                      .card-modalWindow__content__form__sub__wide-field__year
+                        %input.card-modalWindow__content__form__sub__wide-field__year__input{type: 'text', name: 'exp_year', maxlength: '2', placeholder: '年'}
+                    .card-modalWindow__content__form__sub__cvc
+                      %label.card-modalWindow__content__form__sub__cvc__label CVC
+                      %input.card-modalWindow__content__form__sub__cvc__input{type: 'text', name: 'cvc', maxlengs: '3', placeholder: 'cvc'}
+                  .card-modalWindow__content__form__name
+                    %label.card-modalWindow__content__form__name__label 名前
+                    %input.card-modalWindow__content__form__name__input{type: 'text', name: 'ccname', placeholder: 'TARO TANAKA'}
+                  .card-modalWindow__content__form__submit
+                    %input.card-modalWindow__content__form__submit{type: 'submit', value: 'カードで支払う', form: 'charge-form'}
+                  
 
           
   
