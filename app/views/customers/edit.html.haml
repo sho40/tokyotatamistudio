@@ -1,0 +1,65 @@
+#account-page.account-page
+  .account-page__inner.clearfix
+    .account-page__inner--left.account-page__header
+      %h2 Edit Account
+      %h5 アカウントの編集
+      = link_to "ログアウト", destroy_customer_session_path, method: :delete, class: 'btn'
+      = link_to "確認画面に戻る", purchases_path, class: 'btn'
+    .account-page__inner--right.user-form
+      = form_for(current_customer) do |f|
+        .field
+          .field-label
+            = f.label :name
+          .field-input
+            = f.text_field :name, autocomplete: "name"
+        .field
+          .field-label
+            = f.label :tel_number
+          .field-input
+            = f.number_field :tel, autocomplete: "tel"
+        .field
+          .field-label
+            = f.label :email
+          .field-input
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          .field-label
+            = f.label :postcode
+          .field-input
+            = f.number_field :postcode
+        .field
+          .field-label
+            = f.label :prefecture_code
+          .field-input
+            = f.text_field :prefecture_code,collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: '都道府県'
+        .field
+          .field-label
+            = f.label :address_city
+          .field-input
+            = f.text_field :address_city
+        .field
+          .field-label
+            = f.label :address_street
+          .field-input
+            = f.text_field :address_street
+        .field
+          .field-label
+            = f.label :address_building
+          .field-input
+            = f.text_field :address_building
+        .field
+          .field-label
+            = f.label :password
+            %i (英数字#{@minimum_password_length}文字以上)
+          .field-input
+            - if @minimum_password_length
+              %em
+            %br/
+            = f.password_field :password, autocomplete: "new-password"
+        .field
+          .field-label
+            = f.label :password_confirmation
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+        .actions
+          = f.submit "変更する", class: 'btn'

@@ -1,34 +1,129 @@
-購入確認
-%br/
-%br/
-- @sum = 0
-- @cart_items.each do |i|
-  .items
-    = "商品名 : #{i.product.name}"
-    %br/
-    = "価格: ¥#{i.product.price} × 個数: #{i.quantity} = ¥#{i.product.price * i.quantity}"
-    %p -------------------------------
-    - @sum += (i.product.price * i.quantity)
-.items__total
-  = "合計金額 : ¥#{@sum}"
-    
-%br/
-名前
-%br/
-= current_customer.name
-%br/
-%br/
-住所
-%br/
-= current_customer.prefecture_code
-= current_customer.address_city
-= current_customer.address_street
-= current_customer.address_building
-%br/
-%br/
-= form_with local: true, url: purchases_pay_path do |form|
-  = form.hidden_field :amount, value: @sum
-  %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
-%br/
-%br/
-= link_to "ログアウト", destroy_user_session_path, method: :delete
+.main-view
+  = render 'shared/cart-header'
+  .confarm-content
+    .confarm-content__main
+      .confarm-content__main__customer
+        .confarm-content__main__customer__title
+          .confarm-content__main__customer__title__font 購入者情報（お届け先）の確認
+        .confarm-content__main__customer__box
+          .confarm-content__main__customer__box__title 購入者情報
+          .confarm-content__main__customer__box__basic-information
+            .confarm-content__main__customer__box__basic-information__left
+              .confarm-content__main__customer__box__basic-information__left__title 基本情報
+              .confarm-content__main__customer__box__basic-information__left__informations
+                #confarm-informations-parts
+                  = current_customer.name
+                #confarm-informations-parts
+                  = "〒#{current_customer.postcode}"
+                  %br/
+                  = current_customer.prefecture_code
+                  = current_customer.address_city
+                  = current_customer.address_street
+                  = current_customer.address_building
+                #confarm-informations-parts
+                  = current_customer.tel
+                #confarm-informations-parts
+                  = current_customer.email
+            .confarm-content__main__customer__box__basic-information__right
+              = link_to "変更", edit_customer_path(current_customer.id), class: 'confarm-content__main__customer__box__basic-information__right__update-btn'
+
+      .confarm-content__main__current-cart
+        .confarm-content__main__current-cart__title
+          %p.confarm-content__main__current-cart__title__font 注文内容
+        .confarm-content__main__current-cart__box
+          .confarm-content__main__current-cart__box__top
+            %p.confarm-content__main__current-cart__box__top__name 商品名
+            %p.confarm-content__main__current-cart__box__top__price 値段
+            %p.confarm-content__main__current-cart__box__top__sum 個数
+            %p.confarm-content__main__current-cart__box__top__subtotal 小計
+          .confarm-content__main__current-cart__box__middle 
+            - @cart_items.each do |i|
+              .confarm-content__main__current-cart__box__middle__product{"item-id": "#{i.id}"}
+                .confarm-content__main__current-cart__box__middle__product__title
+                  .confarm-content__main__current-cart__box__middle__product__title__name
+                    = i.product.name
+                  = image_tag(i.product.image.url, class: 'cart-content__main__current-cart__box__middle__product__title__image')
+                .confarm-content__main__current-cart__box__middle__product__price
+                  = "¥#{i.product.price}"
+                #confarm-view-product-quantity
+                  .confarm-content__main__current-cart__box__middle__product__sum__quantity
+                    = "現在の数量 : #{i.quantity}"
+                .confarm-content__main__current-cart__box__middle__product__subtotal
+                  = "¥#{i.product.price * i.quantity}"
+          .confarm-content__main__current-cart__box__bottom
+            .confarm-content__main__current-cart__box__bottom__products
+              .confarm-content__main__current-cart__box__bottom__products__title 商品
+              .confarm-content__main__current-cart__box__bottom__products__price 
+                = @total.sum
+            .confarm-content__main__current-cart__box__bottom__shipping-fee
+              .confarm-content__main__current-cart__box__bottom__shipping-fee__title 送料
+              .confarm-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
+            .confarm-content__main__current-cart__box__bottom__total
+              .confarm-content__main__current-cart__box__bottom__total__box
+                .confarm-content__main__current-cart__box__bottom__total__box__left
+                  = "合計 :" 
+                .confarm-content__main__current-cart__box__bottom__total__box__right
+                  = "¥ #{@total.sum}"
+      .confarm-content__main__purchase
+        .confarm-content__main__purchase__cart-link
+          = link_to "カートに戻る", cart_path(current_cart.id), class: 'confarm-content__main__purchase__cart-link__btn'
+        .confarm-content__main__purchase__purchase-link
+          = form_with local: true, url: purchases_pay_path, class: 'card-form' do |form|
+            = form.hidden_field :amount, value: @total.sum
+            = form.hidden_field :cart_id, value: current_cart.id
+            = form.hidden_field :customer_id, value: current_customer.id
+            .confarm-content__main__purchase__purchase-link__btn#open-modal カード決済をする
+
+            #card-overlay
+            .card-modalWindow#card-modalWindow
+              .card-modalWindow__content
+                .card-modalWindow__content__top
+                  .card-modalWindow__content__top__close-btn ×
+                  .card-modalWindow__content__top__font
+                    = "支払い情報"
+                .card-modalWindow__content__form
+                  .card-modalWindow__content__form__card-logos
+                    .card-modalWindow__content__form__card-logos__master
+                      = image_tag('master-card.png', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__visa
+                      = image_tag('visa.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__jcb
+                      = image_tag('jcb.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__amex
+                      = image_tag('amex.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__diners
+                      = image_tag('diners.gif', id: 'card-logo')
+                    .card-modalWindow__content__form__card-logos__discover
+                      = image_tag('discover.gif', id: 'card-logo')
+
+                  .card-modalWindow__content__form__number
+                    .card-modalWindow__content__form__number__label 
+                      = form.label :number, 'カード'
+                    = form.text_field :card_number, name: 'card_number', type: 'text', maxlength: '16', placeholder: '1234 5678 9012 3456',id: "card_number", class: 'card-modalWindow__content__form__number__input'
+                  .card-modalWindow__content__form__sub
+                    .card-modalWindow__content__form__sub__wide-field
+                      .card-modalWindow__content__form__sub__wide-field__label
+                        = form.label :limit, '有効期限'
+                      .card-modalWindow__content__form__sub__wide-field__input
+                        = form.text_field :exp_month, type: 'text', name: 'exp_month', maxlength: '2', placeholder: '01', id:"exp_month", class: 'card-modalWindow__content__form__sub__wide-field__input__month'
+                        .card-modalWindow__content__form__sub__wide-field__input__separate /
+                        = form.text_field :exp_year, type: 'text', name: 'exp_year', maxlength: '4', placeholder: '2030', id:"exp_year", class: 'card-modalWindow__content__form__sub__wide-field__input__year'
+                    .card-modalWindow__content__form__sub__cvc
+                      .card-modalWindow__content__form__sub__cvc__label
+                        = form.label :cvc, 'CVC番号'
+                      = form.text_field :cvc, type: 'text', name: 'cvc', maxlength: '4', placeholder: '123', id:"cvc", class: 'card-modalWindow__content__form__sub__cvc__input'
+                  .card-modalWindow__content__form__name
+                    .card-modalWindow__content__form__name__label 
+                      = form.label :name, '名前'
+                    = form.text_field :name, type: 'text', name: 'ccname', placeholder: 'TARO TANAKA', id: 'name', class: 'card-modalWindow__content__form__name__input',autocomplete: "off"
+                  .card-modalWindow__content__form__submit
+                    = form.button 'カードで支払う', class: 'card-modalWindow__content__form__submit__btn', id: "charge-form"
+                  
+
+          
+  
+  = render 'shared/footer'
+  = link_to "ログアウト", destroy_customer_session_path, method: :delete
+
+
+
