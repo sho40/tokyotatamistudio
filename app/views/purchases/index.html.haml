@@ -68,12 +68,11 @@
         .confarm-content__main__purchase__cart-link
           = link_to "カートに戻る", cart_path(current_cart.id), class: 'confarm-content__main__purchase__cart-link__btn'
         .confarm-content__main__purchase__purchase-link
-          = form_with local: true, url: purchases_pay_path, id: 'charge-form' do |form|
+          = form_with local: true, url: purchases_pay_path, class: 'card-form' do |form|
             = form.hidden_field :amount, value: @total.sum
             = form.hidden_field :cart_id, value: current_cart.id
             = form.hidden_field :customer_id, value: current_customer.id
-            = form.button "カード決済をする", class: 'confarm-content__main__purchase__purchase-link__btn', id: 'open-modal'
-            -# %script.payjp-button{"data-key" => "pk_test_249441c3c84fde3e191db39c", src: "https://checkout.pay.jp", type: "text/javascript"}
+            .confarm-content__main__purchase__purchase-link__btn#open-modal カード決済をする
 
             #card-overlay
             .card-modalWindow#card-modalWindow
@@ -98,23 +97,27 @@
                       = image_tag('discover.gif', id: 'card-logo')
 
                   .card-modalWindow__content__form__number
-                    %label.card-modalWindow__content__form__number__label カード番号
-                    %input.card-modalWindow__content__form__number__input{type: 'text', name: 'number', maxlength: '16', placeholder: '1234 5678 9012 3456' }
+                    .card-modalWindow__content__form__number__label 
+                      = form.label :number, 'カード'
+                    = form.text_field :card_number, name: 'card_number', type: 'text', maxlength: '16', placeholder: '1234 5678 9012 3456',id: "card_number", class: 'card-modalWindow__content__form__number__input'
                   .card-modalWindow__content__form__sub
                     .card-modalWindow__content__form__sub__wide-field
-                      %label.card-modalWindow__content__form__sub__wide-field__label 有効期限
-                      .card-modalWindow__content__form__sub__wide-field__month
-                        %input.card-modalWindow__content__form__sub__wide-field__month__input{type: 'text', name: 'exp_month', maxlength: '2', placeholder: '月'}
-                      .card-modalWindow__content__form__sub__wide-field__year
-                        %input.card-modalWindow__content__form__sub__wide-field__year__input{type: 'text', name: 'exp_year', maxlength: '2', placeholder: '年'}
+                      .card-modalWindow__content__form__sub__wide-field__label
+                        = form.label :limit, '有効期限'
+                      .card-modalWindow__content__form__sub__wide-field__input
+                        = form.text_field :exp_month, type: 'text', name: 'exp_month', maxlength: '2', placeholder: '01', id:"exp_month", class: 'card-modalWindow__content__form__sub__wide-field__input__month'
+                        .card-modalWindow__content__form__sub__wide-field__input__separate /
+                        = form.text_field :exp_year, type: 'text', name: 'exp_year', maxlength: '4', placeholder: '2030', id:"exp_year", class: 'card-modalWindow__content__form__sub__wide-field__input__year'
                     .card-modalWindow__content__form__sub__cvc
-                      %label.card-modalWindow__content__form__sub__cvc__label CVC
-                      %input.card-modalWindow__content__form__sub__cvc__input{type: 'text', name: 'cvc', maxlengs: '3', placeholder: 'cvc'}
+                      .card-modalWindow__content__form__sub__cvc__label
+                        = form.label :cvc, 'CVC番号'
+                      = form.text_field :cvc, type: 'text', name: 'cvc', maxlength: '4', placeholder: '123', id:"cvc", class: 'card-modalWindow__content__form__sub__cvc__input'
                   .card-modalWindow__content__form__name
-                    %label.card-modalWindow__content__form__name__label 名前
-                    %input.card-modalWindow__content__form__name__input{type: 'text', name: 'ccname', placeholder: 'TARO TANAKA'}
+                    .card-modalWindow__content__form__name__label 
+                      = form.label :name, '名前'
+                    = form.text_field :name, type: 'text', name: 'ccname', placeholder: 'TARO TANAKA', id: 'name', class: 'card-modalWindow__content__form__name__input',autocomplete: "off"
                   .card-modalWindow__content__form__submit
-                    %input.card-modalWindow__content__form__submit{type: 'submit', value: 'カードで支払う', form: 'charge-form'}
+                    = form.button 'カードで支払う', class: 'card-modalWindow__content__form__submit__btn', id: "charge-form"
                   
 
           
