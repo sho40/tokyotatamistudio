@@ -20,7 +20,7 @@ $(document).on('turbolinks:load',function(){
     
       $('#card-modalWindow').css({
         'left': ((w - cw) / 2) + 'px',
-        'top': ((h - ch) / 2) + 'px'
+        'top': ((h - ch) / 4) + 'px'
       });
     }
   });
