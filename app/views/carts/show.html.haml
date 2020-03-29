@@ -10,45 +10,57 @@
           %p.cart-content__main__current-cart__box__top__price 値段
           %p.cart-content__main__current-cart__box__top__sum 個数
           %p.cart-content__main__current-cart__box__top__subtotal 小計
-        .cart-content__main__current-cart__box__middle 
-          - @cart_items.each do |i|
-            .cart-content__main__current-cart__box__middle__product{"item-id": "#{i.id}"}
-              .cart-content__main__current-cart__box__middle__product__title
-                .cart-content__main__current-cart__box__middle__product__title__name
-                  = i.product.name
-                = image_tag(i.product.image.url, class: 'cart-content__main__current-cart__box__middle__product__title__image')
-              .cart-content__main__current-cart__box__middle__product__price
-                = "¥#{i.product.price}"
-              .cart-content__main__current-cart__box__middle__product__sum
-                .cart-content__main__current-cart__box__middle__product__sum__quantity
-                  = "現在の数量 : #{i.quantity}"
-                .cart-content__main__current-cart__box__middle__product__sum__edit
-                  = form_with model: @cart_item, url: update_item_path, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change' do |item|
-                    = item.number_field :quantity, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__field'
-                    = item.hidden_field :product_id, value: i.product_id
-                    = item.submit :"数量変更", class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__btn'
-                  .cart-content__main__current-cart__box__middle__product__sum__edit__delete-btn 削除
-              .cart-content__main__current-cart__box__middle__product__subtotal
-                = "¥#{i.product.price * i.quantity}"
-        .cart-content__main__current-cart__box__bottom
-          .cart-content__main__current-cart__box__bottom__products
-            .cart-content__main__current-cart__box__bottom__products__title 商品
-            .cart-content__main__current-cart__box__bottom__products__price 
-              = @total.sum
-          .cart-content__main__current-cart__box__bottom__shipping-fee
-            .cart-content__main__current-cart__box__bottom__shipping-fee__title 送料
-            .cart-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
-          .cart-content__main__current-cart__box__bottom__total
-            .cart-content__main__current-cart__box__bottom__total__box
-              .cart-content__main__current-cart__box__bottom__total__box__left
-                = "合計 :" 
-              .cart-content__main__current-cart__box__bottom__total__box__right
-                = "¥ #{@total.sum}"
-    .cart-content__main__links
-      .cart-content__main__links__products-link
-        = link_to "買い物を続ける", products_path, class: 'cart-content__main__links__products-link__btn'
-      .cart-content__main__links__purchase-link
-        = link_to "購入確認へ", purchases_path, class: 'cart-content__main__links__purchase-link__btn'
+        - if @cart_items.empty?
+          .cart-content__main__current-cart__box__middle
+            .cart-content__main__current-cart__box__middle__empty
+              = 'カートには何もありません'
+        - else
+          .cart-content__main__current-cart__box__middle 
+            - @cart_items.each do |i|
+              .cart-content__main__current-cart__box__middle__product{"item-id": "#{i.id}"}
+                .cart-content__main__current-cart__box__middle__product__title
+                  .cart-content__main__current-cart__box__middle__product__title__name
+                    = i.product.name
+                  = image_tag(i.product.image.url, class: 'cart-content__main__current-cart__box__middle__product__title__image')
+                .cart-content__main__current-cart__box__middle__product__price
+                  = "¥#{i.product.price}"
+                .cart-content__main__current-cart__box__middle__product__sum
+                  .cart-content__main__current-cart__box__middle__product__sum__quantity
+                    = "現在の数量 : #{i.quantity}"
+                  .cart-content__main__current-cart__box__middle__product__sum__edit
+                    = form_with model: @cart_item, url: update_item_path, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change' do |item|
+                      = item.number_field :quantity, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__field'
+                      = item.hidden_field :product_id, value: i.product_id
+                      = item.submit :"数量変更", class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__btn'
+                    .cart-content__main__current-cart__box__middle__product__sum__edit__delete-btn 削除
+                .cart-content__main__current-cart__box__middle__product__subtotal
+                  = "¥#{i.product.price * i.quantity}"
+          .cart-content__main__current-cart__box__bottom
+            .cart-content__main__current-cart__box__bottom__products
+              .cart-content__main__current-cart__box__bottom__products__title 商品
+              .cart-content__main__current-cart__box__bottom__products__price 
+                = @total.sum
+            .cart-content__main__current-cart__box__bottom__shipping-fee
+              .cart-content__main__current-cart__box__bottom__shipping-fee__title 送料
+              .cart-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
+            .cart-content__main__current-cart__box__bottom__total
+              .cart-content__main__current-cart__box__bottom__total__box
+                .cart-content__main__current-cart__box__bottom__total__box__left
+                  = "合計 :" 
+                .cart-content__main__current-cart__box__bottom__total__box__right
+                  = "¥ #{@total.sum}"
+    - if @cart_items.empty?
+      .cart-content__main__links
+        .cart-content__main__links__products-link
+          = link_to "商品一覧へ", products_path, class: 'cart-content__main__links__products-link__btn'
+        .cart-content__main__links__purchase-link
+          .cart-content__main__links__purchase-link__btn 購入確認へ
+    - else
+      .cart-content__main__links
+        .cart-content__main__links__products-link
+          = link_to "買い物を続ける", products_path, class: 'cart-content__main__links__products-link__btn'
+        .cart-content__main__links__purchase-link
+          = link_to "購入確認へ", purchases_path, class: 'cart-content__main__links__purchase-link__btn'
   = render 'shared/footer'
 
 

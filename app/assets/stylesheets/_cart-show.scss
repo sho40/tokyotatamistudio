@@ -70,6 +70,12 @@
           }
         }
         &__middle {
+          &__empty {
+            text-align: center;
+            line-height: 300px;
+            font-size: 18px;
+            color: #666666;
+          }
           &__product {
             border-bottom: #dbdbdb solid 2px;
             padding-bottom: 7px;
