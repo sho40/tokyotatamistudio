@@ -19,7 +19,12 @@ class PurchasesController < ApplicationController
       card: params['payjpToken'],
       currency: 'jpy'
     )
-    purchase = Purchase.create(purchase_params)
+    purchase = Purchase.new(purchase_params)
+    if purchase.save
+      session[:cart_id] = nil
+    else
+      render :index
+    end
   end
 
 
