@@ -8,7 +8,7 @@
           .footer__content__left__info__address__text
             = "〒197-0011 東京都福生市福生2457-6"
           .footer__content__left__info__address__map-btn
-            = button_to "map open", {},class: 'footer__content__left__info__address__map-btn__text'
+            .footer__content__left__info__address__map-btn__text{href: "javascript:;", onclick: "window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都福生市大字福生２４５７−６'));return false;"} map
         .footer__content__left__info__tel
           = "TEL 090-3538-6885"
         .footer__content__left__info__open
