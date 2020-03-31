@@ -1,47 +1,46 @@
-.wrapper
-  .home-header
-    .home-header__main
-      .home-header__main__content
-        .home-header__main__content__logo
-          = link_to "東京畳工房", root_path, class: 'home-header__main__content__logo__top',id: 'header-font'
-          = link_to "Tokyo Tatami Studio", root_path, class: 'home-header__main__content__logo__bottom',id: 'header-font'
-        .home-header__main__content__menu
-          #menu.home-header__main__content__menu__products
-            = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products--link', id: 'header-font'
-          #menu.home-header__main__content__menu__rental
-            = link_to "畳レンタル", {},id: 'header-font'
-          #menu.home-header__main__content__menu__about-us
-            = link_to "私たちについて", {}, id: 'header-font'
-    .home-header__right
-      .home-header__right__contact
-        = link_to "お問い合わせ", {},id: 'header-font',class: 'home-header__right__contact__text'
 
-  .home-home-image
-    #home-img
-
-  .home-content
-    .home-content__main
-      .home-content__main__image
-        = image_tag('product2.jpg', class: 'home-content-top-img')
-      .home-content__main__text
-        %p お客様の心に安らぎをあたえられる。 
-        %p 任せて安心の畳屋を目指しております。
-      .home-content__main__links
-        #home-links-images.home-content__main__links__products
-          = image_tag('product1.jpg', id: "home-links-img")
-        #home-links-images.home-content__main__links__rental
-          = image_tag('rental1.jpg', id: "home-links-img")
-      .home-content__main__about-us
-        = image_tag('IMG_8764.jpg', id: "home-links-img")
-      .home-content__main__contact
-        .home-content__main__contact__text
-          %p お問い合わせはこちら
-          %p ---
-          %p contact
-  
-  = render 'shared/footer'
-
-        
-
-
+.home-header
+  .home-header__main
+    .home-header__main__content
+      .home-header__main__content__logo
+        = link_to "東京畳工房", root_path, class: 'home-header__main__content__logo__top',id: 'header-font'
+        = link_to "Tokyo Tatami Studio", root_path, class: 'home-header__main__content__logo__bottom',id: 'header-font'
+      .home-header__main__content__menu
+        #menu.home-header__main__content__menu__products
+          = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products--link', id: 'header-font'
+        #menu.home-header__main__content__menu__rental
+          = link_to "畳レンタル", {},id: 'header-font'
+        #menu.home-header__main__content__menu__about-us
+          = link_to "お問い合わせ", {},id: 'header-font',class: 'home-header__right__contact__text'
+  .home-header__right
     
+
+.home-image
+  #home-img
+
+.home-content
+  .home-content__main
+    .home-content__main__image
+      = image_tag('product2.jpg', class: 'home-content-top-img')
+    .home-content__main__text
+      %p お客様の心に安らぎをあたえられる。 
+      %p 任せて安心の畳屋を目指しております。
+    .home-content__main__links
+      #home-links-images.home-content__main__links__products
+        = image_tag('product1.jpg', id: "home-links-img")
+      #home-links-images.home-content__main__links__rental
+        = image_tag('rental1.jpg', id: "home-links-img")
+    .home-content__main__about-us
+      = image_tag('IMG_8764.jpg', id: "home-links-img")
+    .home-content__main__contact
+      .home-content__main__contact__text
+        %p お問い合わせはこちら
+        %p ---
+        %p contact
+
+= render 'shared/footer'
+
+      
+
+
+  
