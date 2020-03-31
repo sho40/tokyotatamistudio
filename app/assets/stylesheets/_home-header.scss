@@ -1,7 +1,8 @@
 @media screen and (min-width: 767px) {
   #header-font {
     text-decoration: none;
-    color: #ffffff;
+    color: #333333;
+    font-weight: bold;
   }
 
   @font-face {
@@ -9,16 +10,17 @@
     src: url('fonts/KouzanMouhituFontOTF.otf');
   }
 
+
+
   .home-header {
     width: 100%;
     position: fixed;
     display: flex;
-    height: 90px;
     border-bottom: 1px solid rgba(255,255,255,.2);
     &__main {
       margin: auto;
       width: 100%;
-      padding: 0 105px;
+      padding: 0 15px;
       &__content {
         display: flex;
         justify-content: space-between;
@@ -38,32 +40,21 @@
         }
         &__menu {
           display: flex;
-          line-height: 90px;
+          margin: 0 auto;
+          line-height: 100px;
+
         }
         #menu {
-          margin-right: 20px;
-          font-size: 15px;
+          margin-right: 40px;
+          font-size: 18px;
           font-family: Arial,Helvetica Neue,Helvetica,ヒラギノ角ゴ Pro W3,sans-serif; -moz-osx-font-smoothing: grayscale;
         }
       }
   
-  
     }
     &__right {
-      width: 135px;
-      margin-right: 10px;
-      &__contact {
-        font-size: 13px;
-        line-height: 90px;
-        text-align: center;
-        &__text {
-          border-radius: 1px;
-          border: 1px solid #ffffff;
-          border-spacing: 10px 100px;
-          padding: 10px 10px 10px 10px;
-
-        }
-      }
+      width: 225px;
+      background-color: #666666;
     }
   }
 
