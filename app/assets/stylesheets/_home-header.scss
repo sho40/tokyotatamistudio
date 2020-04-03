@@ -14,9 +14,12 @@
 
   .home-header {
     width: 100%;
-    position: fixed;
     display: flex;
-    border-bottom: 1px solid rgba(58,50,38,.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
     &__main {
       margin: auto;
       width: 100%;
@@ -41,7 +44,7 @@
         &__menu {
           display: flex;
           margin: 0 auto;
-          line-height: 100px;
+          line-height: 7rem;
 
         }
         #menu {
