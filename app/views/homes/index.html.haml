@@ -22,6 +22,15 @@
     .mainimage
 
   .home-content
+    #onebox.home-content__products
+      #onebox__title.home-content__products__title 商品
+      #onebox__main.home-content__products__list
+        .home-content__products__list__minitatami
+          = link_to products_path, class: 'home-content__products__list__minitatami__frame' do
+            = image_tag('product1.jpg', class: "home-content__products__list__minitatami__frame__image" )
+          .home-content__products__list__minitatami__title ミニ畳
+
+
     .home-content__main
       .home-content__main__image
         = image_tag('product2.jpg', class: 'home-content-top-img')
