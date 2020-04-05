@@ -1,12 +1,9 @@
-$(function(){
+// $(function(){
   
-  $(".home-content , .footer").css("display", "none");
-  setTimeout(function(){
-    // $(".mainvisual").css("border-width", "7rem 8vw");
-    $(".home-content , .footer").css("display", "block");
+//   $(".home-content , .footer").css("display", "none");
+//   setTimeout(function(){
+//     $(".home-content , .footer").css("display", "block");
 
-  }, 1800)
+//   }, 1800)
 
-  $(".mainvisual").animate
-
-})
+// })
