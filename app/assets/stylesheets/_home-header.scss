@@ -195,7 +195,7 @@
           height: 100%;
           background: #111111;
           opacity: 0;
-          transition: .3s ease-in-out;
+          transition: 1.4s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         #nav-content {
           overflow: auto;
@@ -206,7 +206,7 @@
           width: 100%;
           height: 100%;
           background: rgb(144, 180, 75);
-          transition: .3s ease-in-out;
+          transition: 1.4s cubic-bezier(0.215, 0.61, 0.355, 1);
           -webkit-transform: translateX(-105%);
           transform: translateX(-105%);
           padding-top: 20vh;
