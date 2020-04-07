@@ -4,7 +4,7 @@
     .products-content__main__items
       - @products.each do |p|
         .products-content__main__items__box
-          = link_to product_path(p.id) do
+          = link_to product_path(p.id), class: 'image-wrap' do
             = image_tag(p.image.url, class: 'products-content__main__items__box__image')
           .products-content__main__items__box__name
             = p.name
