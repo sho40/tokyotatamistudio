@@ -244,22 +244,20 @@
     &__contact {
       margin: 40px 20vw 40px 0;
       font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
-      cursor: pointer;
-      text-decoration: none;
-      color: #111111;
-      &:hover{
-        background: #222;
-        color: #d6cdcd;
-      }
-      
       &__link {
         border-top: solid #111111 1px;
         border-bottom: solid #111111 1px;
         padding: 20px 0 20px 15px;
         display: flex;
-        justify-content: space-between;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        text-decoration: none;
+        color: #111111;
+        &:hover{
+          background: #222;
+          color: #d6cdcd;
+        }
         &__main-text {
           font-size: 37px;
           letter-spacing: 5px;
@@ -268,10 +266,11 @@
             font-size: 15px;
             display: block;
           }
-        }
-        &__sub-text {
-          font-size: 18px;
-          margin: 50px 40vh 0 0;
+          &::after {
+            content: 'お気軽にお問い合わせください';
+            font-size: 18px;
+            margin-left: 20vw;
+          }
         }
       }
     }
