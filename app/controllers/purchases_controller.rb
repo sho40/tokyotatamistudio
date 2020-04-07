@@ -4,7 +4,6 @@ class PurchasesController < ApplicationController
 
   def index
     @cart_items = current_cart.cart_items
-    @cart_items = current_cart.cart_items
     @total = []
     @cart_items.each do |item|
       @subtotal = item.product.price * item.quantity
@@ -20,8 +19,11 @@ class PurchasesController < ApplicationController
       currency: 'jpy'
     )
     purchase = Purchase.new(purchase_params)
+    @cart_items = current_cart.cart_items
+    @customer = Customer.find_by(id: purchase.customer_id)
     if purchase.save
       session[:cart_id] = nil
+      NotificationMailer.send_confirm_to_customer(@customer).deliver
     else
       render :index
     end
