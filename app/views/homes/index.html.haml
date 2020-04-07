@@ -1,6 +1,6 @@
 
 
-.opening-image
+
 
 .main
   .home-header
@@ -34,8 +34,9 @@
             .nav-content-list__contact
               = link_to "お問い合わせ", {}, class: 'nav-content-list__contact__link' 
 
-
-      
+  %a.scloll{href: '#next-section'}
+    %span.scroll__text scroll
+    .arrow      
   .mainvisual
     .mainimage
     .mainvisual__text
@@ -67,11 +68,11 @@
       #onebox__title.home-content__introduce__title 伝統の畳
       #onebox__main.home-content__introduce__about
 
-    .home-content__contact
-      = link_to (), class: 'home-content__contact__link' do
-        .home-content__contact__link__main-text お問い合わせ
-
-
+    .bottom
+      .home-content__contact
+        = link_to (), class: 'home-content__contact__link' do
+          .home-content__contact__link__main-text お問い合わせ
+      
   = render 'shared/footer'
 
         
