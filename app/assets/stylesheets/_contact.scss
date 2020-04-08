@@ -1,0 +1,87 @@
+
+*{box-sizing: border-box;}
+
+.contact-container{
+  background: #EFBB24;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+  &__title{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    border-top: solid 1px #fff;
+    padding-top: 55px;
+    margin-bottom: 55px;
+  }
+}
+
+.nice-wrap{
+  position: relative;
+  width: 500px;
+  margin: 0 auto 155px;
+}
+.nice-wrap div {
+  position: relative;
+}
+
+.nice-label{
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  z-index: 1;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #a0a0a0;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.active{
+  top: -45px;
+  left: -25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4b4e2a;
+}
+
+.nice-textbox{
+  position: relative;
+  display: block;
+  width: 500px;
+  margin-bottom: 70px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #111111;
+  outline: none;
+  cursor: pointer;
+}
+
+#ftext {
+  height: 300px;
+}
+
+.contact-submit-btn {
+  display:block;
+  width: 100%;
+  line-height: 45px;
+  color: #111111;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 3px #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 0.8em;
+  &:hover{
+    background-color: #EFBB24;
+    color: #fff;
+  }
+}

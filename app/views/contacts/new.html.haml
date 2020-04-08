@@ -1,0 +1,26 @@
+
+= render 'shared/home-header'
+.contact-container
+  .contact-container__title 問い合わせフォーム
+  = form_with(model: @contact, local: true, class: 'nice-wrap') do |f|
+    %div
+      = f.label :"名前 (必須)", class: 'nice-label', for: 'fname'
+      = f.text_field :name, class: 'nice-textbox', id: 'fname'
+    
+    %div
+      = f.label :"メールアドレス (必須)", class: 'nice-label', for: 'femail'
+      = f.text_field :email, class: 'nice-textbox', id: 'femail'
+    
+    %div
+      = f.label :"件名 (必須)", class: 'nice-label', for: 'ftitle'
+      = f.text_field :title, class: 'nice-textbox', id: 'ftitle'
+    
+    %div
+      = f.label :"本文 (必須)", class: 'nice-label', for: 'ftext'
+      = f.text_area :message, class: 'nice-textbox', id: 'ftext'
+    
+    = f.submit "送信する", class: 'contact-submit-btn'
+
+  = render 'shared/footer'
+
+    
