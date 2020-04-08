@@ -1,0 +1,30 @@
+.home-header
+  .home-header__main
+    .home-header__main__content
+      .home-header__main__content__logo
+        = link_to "東京畳工房", root_path, class: 'home-header__main__content__logo__top',id: 'header-font'
+        = link_to "Tokyo Tatami Studio", root_path, class: 'home-header__main__content__logo__bottom',id: 'header-font'
+      .home-header__main__content__menu
+        #menu.home-header__main__content__menu__products
+          = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products__link', id: 'header-font'
+        #menu.home-header__main__content__menu__rental
+          = link_to "畳レンタル", {}, class: 'home-header__main__content__menu__rental__link', id: 'header-font'
+        #menu.home-header__main__content__menu__contact
+          = link_to "お問い合わせ", new_contact_path , class: 'home-header__main__content__menu__contact__link', id: 'header-font'
+  .home-header__right
+    #nav-drawer
+      %input.nav-unshown#nav-input{type: 'checkbox'}
+      %label#nav-open{for: 'nav-input'}
+        %span
+      %label#nav-close.nav-unshown{for: "nav-input"}
+      #nav-content
+        .nav-content-logo
+          = link_to "東京畳工房", root_path, class: 'nav-content-logo__top',id: 'header-font'
+          = link_to "Tokyo Tatami Studio", root_path, class: 'nav-content-logo__bottom',id: 'header-font'
+        .nav-content-list
+          .nav-content-list__products
+            = link_to "商品一覧", products_path, class: 'nav-content-list__products__link'
+          .nav-content-list__rental
+            = link_to "畳レンタル", {}, class: 'nav-content-list__rental__link'
+          .nav-content-list__contact
+            = link_to "お問い合わせ", {}, class: 'nav-content-list__contact__link' 
