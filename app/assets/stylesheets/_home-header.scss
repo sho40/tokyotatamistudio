@@ -209,7 +209,6 @@
           transition: .8s cubic-bezier(0.215, 0.61, 0.355, 1);
           -webkit-transform: translateX(-105%);
           transform: translateX(-105%);
-          padding-top: 20vh;
           .nav-content-logo {
             position: absolute;
             top: 2vh;
@@ -230,7 +229,7 @@
             width: 100vw;
             padding-top: 55px;
             border-top: solid 1px #fff;
-            margin: 0 auto;
+            margin: 7rem auto 0;
             display: block;
             font-size: 42px;
             text-align: center;
