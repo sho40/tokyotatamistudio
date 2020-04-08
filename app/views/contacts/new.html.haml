@@ -1,0 +1,15 @@
+
+= render 'shared/home-header'
+.contact-container
+  .contact-container__title 問い合わせフォーム
+  = form_with(model: @contact, local: true, class: 'nice-wrap') do |f|
+    %div
+      = f.label :Name, class: 'nice-label', for: 'fname'
+      = f.text_field :name, class: 'nice-textbox', id: 'fname'
+    
+    %div
+      = f.label :Email, class: 'nice-label', for: 'femail'
+      = f.text_field :email, class: 'nice-textbox', id: 'femail'
+      
+
+    
