@@ -55,7 +55,7 @@
               padding-bottom: 3px;
               position: relative;
               &::before {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -66,7 +66,7 @@
                 left: 50%;
               }
               &::after {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -94,7 +94,7 @@
               padding-bottom: 3px;
               position: relative;
               &::before {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -105,7 +105,7 @@
                 left: 50%;
               }
               &::after {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -129,7 +129,7 @@
               padding-bottom: 3px;
               position: relative;
               &::before {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -140,7 +140,7 @@
                 left: 50%;
               }
               &::after {
-                border-bottom: solid 2px #111111;
+                border-bottom: solid 2px #333333;
                 bottom: 0;
                 content: '';
                 display: block;
@@ -195,7 +195,7 @@
           height: 100%;
           background: #111111;
           opacity: 0;
-          transition: 1.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: .8s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         #nav-content {
           overflow: auto;
@@ -206,7 +206,7 @@
           width: 100%;
           height: 100%;
           background: rgb(144, 180, 75);
-          transition: 1.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: .8s cubic-bezier(0.215, 0.61, 0.355, 1);
           -webkit-transform: translateX(-105%);
           transform: translateX(-105%);
           padding-top: 20vh;
@@ -231,7 +231,7 @@
             margin: 0 auto;
             display: block;
             font-size: 42px;
-            padding-left: 40vw;
+            text-align: center;
             font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
             &__products {
               margin-bottom: 13vh;
