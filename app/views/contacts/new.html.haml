@@ -13,12 +13,12 @@
     
     %div
       = f.label :"件名 (必須)", class: 'nice-label', for: 'ftitle'
-      = f.text_field :title, class: 'nice-textbox', id: 'femail'
+      = f.text_field :title, class: 'nice-textbox', id: 'ftitle'
     
     %div
       = f.label :"本文 (必須)", class: 'nice-label', for: 'ftext'
       = f.text_area :message, class: 'nice-textbox', id: 'ftext'
-
+    
     = f.submit "送信する", class: 'contact-submit-btn'
 
   = render 'shared/footer'
