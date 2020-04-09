@@ -175,22 +175,23 @@
       font-weight: bold;
       &__right {
         background: #ffffff;
+        opacity: .9;
         padding-top: 14px;
         height: 210px;
       }
       &__center {
-        background: rgb(144, 180, 75);
+        background: rgba(144, 180, 75, .9);
         padding-top: 14px;
         height: 400px;
       }
       &__left {
-        background: rgb(144, 180, 75);
+        background: rgba(144, 180, 75, .9);
         padding-top: 14px;
         height: 450px;
       }
     }
     .mainimage {
-      background: url("welcome_tatami-studio.jpeg");
+      background: url("opening1.jpg");
       width: 100%;
       height: 100%;
       display: block;
@@ -213,6 +214,7 @@
       height: 100%;
       width: 100%;
       border: #FFF 0px solid;
+      opacity: .9;
       box-sizing: border-box;
       z-index: 0;
       animation-name: animation;
