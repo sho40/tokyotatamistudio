@@ -82,47 +82,6 @@
     }
   }
 
-  // 矢印 
-  // span.scroll__text {
-  //   position: fixed;
-  //   top: 65vh;
-  //   left: 2.5vw;
-  //   width: 0;
-  //   height: 5em;
-  //   color: #111111;
-  // }
-  // .arrow {
-  //   animation: 1s arrow-animation infinite;
-  //   animation-delay: 5.1s;
-  //   width: 0;
-  //   height: 5em;
-  //   border: .5px solid #111111;
-  //   &::after {
-  //     content: '';
-  //     display: block;
-  //     position: absolute;
-  //     top: 100%;
-  //     left: -1px;
-  //     top: 100%;
-  //     left: -2px;
-  //     width: 1px;
-  //     height: 10px;
-  //     border-top: 10px solid #111111;
-  //     border-left: 2px solid transparent;
-  //     border-right: 2px solid transparent;
-
-  //   }
-  // }
-  // @keyframes arrow-animation {
-  //   0% {
-  //     height: 1em;
-  //   }
-
-  //   66% {
-  //     height: 5em;
-  //   }
-  // }
-  
 
   .mainvisual {
     width: 100%;
@@ -285,6 +244,7 @@
 
   .home-content {
     padding-left: 14vw;
+    margin-top: 55px;
     &__products {
       &__title::before {
         content: 'products';
