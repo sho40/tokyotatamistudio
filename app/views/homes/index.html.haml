@@ -3,13 +3,23 @@
 
 
 .main
-  = render 'shared/home-header'
+  #home-header-show
+    = render 'shared/home-header'
 
-  %a.scloll{href: '#next-section'}
-    %span.scroll__text scroll
-    .arrow      
+  .scroll{href: "#"}
+    .arrow 
+
+  -# %a.scroll{href: '#next-section'}
+  -#   %span.scroll__text scroll
+  -#   .arrow 
   .mainvisual
     .mainimage
+    .mainvisual__hello-message
+      .mainvisual__hello-message__welcome
+        = "welcome!"
+    .mainvisual__open-message
+      .mainvisual__open-message__tatami 
+        = "TATAMI"
     .mainvisual__text
       .mainvisual__text__right 東京畳工房は、
       .mainvisual__text__center 畳に関する商品を販売します。
