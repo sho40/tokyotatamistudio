@@ -1,7 +1,7 @@
-# README
+# Tokyo Tatami Studio
 
-Tokyo TATAMI Studio(HP)
-※現在製作中
+#### ~ 日本の畳を世界へ ~
+![github-top](https://user-images.githubusercontent.com/54761041/78881229-75988d80-7a91-11ea-8d76-5b9747c0bc0d.jpg)
 
 世界一おしゃれな畳屋のHPへ！！
 畳製品、和紙を使用したおしゃれ畳、畳端材の販売・紹介サイト 外国人にお土産として畳の小物を。。！  
