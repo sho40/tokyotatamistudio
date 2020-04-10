@@ -48,5 +48,5 @@
 現在未公開(4月中頃公開予定)
 <br>
 <br>
-![github-gif](images/tts-open-mosion.gif)
+![github-gif](tts-open-mosion.gif)
 
