@@ -32,6 +32,7 @@
 <img alt="AWS" src="https://user-images.githubusercontent.com/54761041/78968261-0aa59000-7b3f-11ea-9e4a-2190a12a518b.jpg" width="205px" >
 <img alt="unicorn" src="https://user-images.githubusercontent.com/54761041/78968284-109b7100-7b3f-11ea-89e0-3782b96ff7ed.png" width="105px" >
 <img alt="photoshop" src="https://user-images.githubusercontent.com/54761041/78968259-08433600-7b3f-11ea-94db-8c965fd2c26b.png" width="105px" >
+<img alt="pay.jp" src="https://user-images.githubusercontent.com/54761041/78970118-899cc780-7b43-11ea-82a6-50832217b6b8.jpg" width="205px">
 
 
 </p>
@@ -45,6 +46,8 @@
 現在未公開(4月中頃公開予定)
 <br>
 <br>
+![tts-open-mosion](https://user-images.githubusercontent.com/54761041/78969994-417da500-7b43-11ea-8902-8b66d70431c8.gif)
+
 
 
 
