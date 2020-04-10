@@ -9,7 +9,7 @@
           .products-content__main__items__box__name
             = p.name
           .products-content__main__items__box__price
-            = "¥#{p.price}"
+            = "¥#{number_with_delimiter p.price}"
 = render 'shared/footer'
 
 

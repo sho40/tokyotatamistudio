@@ -15,7 +15,7 @@
           = @product.text
       .product-show-content__main__bottom__right
         .product-show-content__main__bottom__right__price
-          = "¥#{@product.price}"
+          = "¥#{number_with_delimiter @product.price}"
         .product-show-content__main__bottom__right__attention
           = "※こちらの価格には消費税が含まれています。"
           %br/
