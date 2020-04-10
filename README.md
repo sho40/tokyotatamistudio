@@ -46,7 +46,7 @@
 現在未公開(4月中頃公開予定)
 <br>
 <br>
-![tts-open-mosion](https://user-images.githubusercontent.com/54761041/78969994-417da500-7b43-11ea-8902-8b66d70431c8.gif)
+![tts-open-mosion](https://user-images.githubusercontent.com/54761041/78970385-265f6500-7b44-11ea-804a-ccaf7525da65.gif)
 
 
 
