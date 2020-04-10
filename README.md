@@ -20,6 +20,9 @@
 - **ソース管理** ： Git
 - **画像処理** : Photoshop / Lightroom
 
+<br>
+<br>
+
 <p align="center">
   
 <img alt="Rails" src="https://user-images.githubusercontent.com/54761041/78968299-1a24d900-7b3f-11ea-8f5a-eb7e23e115a1.png" width="205px" >
@@ -32,6 +35,17 @@
 
 
 </p>
+
+<br>
+<br>
+<br>
+
+## App URL
+<br>
+現在未公開(4月中頃公開予定)
+<br>
+<br>
+
 
 
 
