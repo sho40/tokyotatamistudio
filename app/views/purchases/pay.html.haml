@@ -1,3 +1,27 @@
-支払いが完了しました
-
-= link_to 'Topへ', root_path
+.wrap
+  = render 'shared/home-header'
+  .purchase_done
+    .purchase_done__contents-list
+      .purchase_done__contents-list__notice
+        = 'Your order has been completed!'
+      .purchase_done__contents-list__thx-text
+        = 'ありがとうございます'
+      .purchase_done__contents-list__about-purchase
+        = 'この後商品の確認メールを送信いたしますので、ご確認をお願い致します。'
+        %br/
+        = 'オーナーがうっかりして万が一1日経ってもメールが届かない場合は'
+        %br/
+        = '恐れ入りますがお電話もしくはメール （ando_3041@yahoo.co.jp）までご連絡くださいませ。'
+        %br/
+        %br/
+        = '購入いただいた商品は通常3~5日を目安に商品を発送いたします。'
+        %br/
+        = '不明点やご要望等ございましたらお問い合わせフォームかお電話にてご連絡くださいませ'
+        %br/
+        = '今後とも東京畳工房をよろしくお願い致します。'
+      .purchase_done__contents-list__image
+        = image_tag('antatsu.png' , width: '400px',height: 'auto', class: 'purchase_done__contents-list__image__photo')
+      .purchase_done__contents-list__home
+        = link_to root_path, class: 'purchase_done__contents-list__home__link' do
+          .purchase_done__contents-list__home__link__text Topページへ
+  = render 'shared/footer'
