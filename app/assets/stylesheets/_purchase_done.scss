@@ -1,0 +1,67 @@
+.purchase_done {
+  width: 100vw;
+  font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+  &__contents-list {
+    padding: 10vh 0;
+    margin-top: 7rem;
+    display: block;
+    &__notice {
+      font-size: 26px;
+      font-weight: bold;
+      max-width: fit-content;
+      margin: auto;
+      &::after {
+        content: '注文完了';
+        display: block;
+        text-align: center;
+        margin-top: 1vh;
+        font-size: 20px;
+      }
+    }
+    &__thx-text {
+      padding-top: 6vh;
+      font-family: 'mouhitu';
+      font-size: 92px;
+      max-width: fit-content;
+      margin: auto;
+    }
+    &__about-purchase {
+      padding-top: 3vh;
+      font-size: 16px;
+      max-width: fit-content;
+      margin: auto;
+      text-align: center;
+    }
+    &__image {
+      padding-top: 5vh;
+      margin: auto;
+      width: fit-content;
+      &__photo {
+      }
+    }
+    &__home {
+      padding-top: 5vh;
+      max-width: fit-content;
+      margin: auto;
+      text-align: center;
+      &__link {
+        text-decoration: none;
+        &__text {
+          padding: 20px 180px;
+          color: #ffffff;
+          text-decoration: none;
+          background: #333333;
+          font-size: 18px;
+          font-weight: bold;
+          border: solid 1px #333333;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+          &:hover {
+            background: #ffffff;
+            color: #111111;
+          }
+        }
+      }
+    }
+  }
+}
