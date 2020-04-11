@@ -1,12 +1,14 @@
 @media screen and (min-width: 767px) {
   #footer-font {
     text-decoration: none;
-    color: #111111;
+    color: #ffffff;
     font-weight: bolder;
   }
 
   .footer {
     &__content {
+      color: #ffffff;
+      background: #333333;
       padding: 50px 100px;
       display: flex;
       justify-content: space-between;
