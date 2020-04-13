@@ -3,6 +3,7 @@
 .contact-container
   .contact-container__title 問い合わせフォーム
   = form_with(model: @contact, local: true, class: 'nice-wrap') do |f|
+    = render 'shared/flash'
     %div
       = f.label :"名前 (必須)", class: 'nice-label', for: 'fname'
       = f.text_field :name, class: 'nice-textbox', id: 'fname'
