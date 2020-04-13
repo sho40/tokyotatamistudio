@@ -14,4 +14,9 @@ ja:
         address_city: 市区町村
         address_street: 番地
         address_building: 建物名・部屋番号(任意)
+      contact:
+        name: 名前
+        email: メールアドレス
+        title: 件名
+        message: 本文
         
