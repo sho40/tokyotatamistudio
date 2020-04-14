@@ -10,7 +10,9 @@ class ContactsController < ApplicationController
       NotificationMailer.contact_mail(@contact).deliver
       redirect_to root_path
     else
-      render :new
+      session[:contact] = @contact.attributes.slice(*contact_params.keys)
+      flash[:denger] = @contact.errors.full_messages
+      redirect_to new_contact_path
     end
   end
 

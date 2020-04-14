@@ -1,0 +1,5 @@
+- if flash[:denger].present?
+  .alert
+    - flash.each do |message_type, messages|
+      - messages.each do |message|
+        %li= message

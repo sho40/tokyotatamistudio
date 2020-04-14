@@ -7,7 +7,10 @@ class CustomersController < ApplicationController
     if current_customer.update(customer_params)
       redirect_to purchases_path
     else
-      render :edit
+      @customer = current_customer
+      session[:customer] = @customer.attributes.slice(*customer_params.keys)
+      flash[:denger] = @customer.errors.full_messages
+      redirect_to edit_customer_path(:id)
     end
   end
 

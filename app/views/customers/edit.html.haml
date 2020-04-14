@@ -7,6 +7,7 @@
       = link_to "確認画面に戻る", purchases_path, class: 'btn'
     .account-page__inner--right.user-form
       = form_for(current_customer) do |f|
+        = render 'shared/flash'
         .field
           .field-label
             = f.label :name
@@ -14,7 +15,7 @@
             = f.text_field :name, autocomplete: "name"
         .field
           .field-label
-            = f.label :tel_number
+            = f.label :tel
           .field-input
             = f.number_field :tel, autocomplete: "tel"
         .field

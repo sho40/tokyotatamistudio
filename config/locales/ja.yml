@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      customer: 顧客
+    attributes:
+      customer:
+        name: 名前
+        tel: 電話番号
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード再入力
+        postcode: 郵便番号
+        prefecture_code: 都道府県
+        address_city: 市区町村
+        address_street: 番地
+        address_building: 建物名・部屋番号(任意)
+      contact:
+        name: 名前
+        email: メールアドレス
+        title: 件名
+        message: 本文
+        
