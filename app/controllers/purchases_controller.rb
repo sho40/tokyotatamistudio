@@ -16,7 +16,7 @@ class PurchasesController < ApplicationController
     Payjp::Charge.create(
       amount: params[:amount],
       card: params['payjpToken'],
-      currency: 'jpy'
+      currency: 'jpy',
     )
     purchase = Purchase.new(purchase_params)
     @cart_items = current_cart.cart_items

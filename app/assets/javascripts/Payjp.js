@@ -17,6 +17,7 @@ $(document).on('turbolinks:load',function(){
 
     Payjp.createToken(card, function(status, response) {
       if (response.error) {
+        $('.payment-errors').show();
         form.find('.payment-errors').text(response.error.message);
         form.find('button[type=submit]').prop('disabled', false);
       }
