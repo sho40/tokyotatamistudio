@@ -7,7 +7,6 @@
       = link_to "確認画面に戻る", purchases_path, class: 'btn'
     .account-page__inner--right.user-form
       = form_for(current_customer) do |f|
-        -# = render 'shared/error_messages', model: f.object
         = render 'shared/flash'
         .field
           .field-label
