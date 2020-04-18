@@ -82,3 +82,11 @@ gem 'jp_prefecture'
 gem 'payjp'
 gem 'dotenv-rails'
 gem 'rails-i18n'
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+end
