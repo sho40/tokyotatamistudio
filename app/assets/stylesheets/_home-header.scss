@@ -5,11 +5,11 @@
     font-weight: bold;
   }
 
-  @font-face {
-    font-family: 'mouhitu';
-    src: url('fonts/KouzanMouhituFontOTF.otf') format('woff');
-    src: url('fonts/KouzanMouhituFontOTF.otf') format('truetype');
-  }
+  // @font-face {
+  //   font-family: 'mouhitu';
+  //   src: url('fonts/KouzanMouhituFontOTF.otf') format('woff');
+  //   src: url('fonts/KouzanMouhituFontOTF.otf') format('truetype');
+  // }
 
 
 
@@ -34,7 +34,7 @@
           width: 225px;
           padding-top: 10px;
           &__top {
-            font-family: 'mouhitu';
+            font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
             font-size: 45px;
           }
           &__bottom {
