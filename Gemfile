@@ -83,6 +83,8 @@ gem 'payjp'
 gem 'dotenv-rails'
 gem 'rails-i18n'
 
+gem 'fog-aws'
+
 group :development, :test do
   gem 'capistrano'
   gem 'capistrano-rbenv'
