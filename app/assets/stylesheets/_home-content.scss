@@ -245,8 +245,6 @@
 
   .home-content {
     padding-left: 14vw;
-
-    margin-top: 55px;
     &__products {
       &__title::before {
         content: 'products';
@@ -373,6 +371,35 @@
         font-size: 15px;
         display: block;
       }
+      &__about {
+        &__box {
+          width: 80%;
+          height: 600px;
+          display: block;
+          &__top {
+            display: flex;
+            height: 50%;
+            &__left {
+              width: 50%;
+              background: #111111;
+            }
+            &__right {
+              width: 50%;
+            }
+          }
+          &__bottom {
+            display: flex;
+            height: 50%;
+            &__left {
+              width: 50%;
+            }
+            &__right {
+              width: 50%;
+              background: #111111;
+            }
+          }
+        }
+      }
     }
     &__introduce {
       &__title::before {
@@ -416,8 +443,9 @@
     }
   }
   #onebox {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    margin-top: 55px;
     font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
     display: block;
     &__title {
@@ -426,7 +454,7 @@
       letter-spacing: 5px;
     }
     &__main {
-      padding: 120px 8vw 20px 10vw;
+      padding: 120px 3vw 20px;
     }
 
   }
