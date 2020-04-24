@@ -245,6 +245,7 @@
 
   .home-content {
     padding-left: 14vw;
+    font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
     &__products {
       &__title::before {
         content: 'products';
@@ -444,7 +445,6 @@
     }
     &__contact {
       margin: 40px 20vw 40px 0;
-      font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
       &__link {
         border-top: solid #111111 1px;
         border-bottom: solid #111111 1px;
@@ -480,7 +480,6 @@
     height: 100%;
     width: 100%;
     margin-top: 55px;
-    font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
     display: block;
     &__title {
       font-size: 32px;
