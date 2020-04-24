@@ -381,10 +381,40 @@
             height: 50%;
             &__left {
               width: 50%;
-              background: #111111;
+              &__image {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
             }
             &__right {
               width: 50%;
+              padding: 1rem;
+              display: block;
+              &__title {
+                text-align: center;
+                font-size: 1.5rem;
+                letter-spacing: .5rem;
+              }
+              &__list {
+                margin-top: 2rem;
+                display: flex;
+                list-style: none;
+                padding-left: 1rem;
+                &__first-half {
+                  width: 50%;
+                }
+                &__first-half li {
+                  margin-top: .5rem;
+                }
+                &__late {
+                  width: 50%;
+                }
+                &__late li {
+                  margin-top: .5rem;
+                }
+                
+              }
             }
           }
           &__bottom {
@@ -395,7 +425,11 @@
             }
             &__right {
               width: 50%;
-              background: #111111;
+              &__image {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
             }
           }
         }
