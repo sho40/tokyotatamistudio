@@ -298,8 +298,10 @@
       }
       &__list {
         display: flex;
+        border-top: solid 2px #666;
+        border-bottom: solid 2px #666;
+        border-left: solid 2px #666;
         &__minitatami {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -417,6 +419,9 @@
         display: block;
       }
       &__about {
+        border-top: solid 2px #666;
+        border-bottom: solid 2px #666;
+        border-left: solid 2px #666;
         &__box {
           width: 80%;
           height: 600px;
@@ -482,7 +487,7 @@
     }
     
     &__contact {
-      margin: 40px 20vw 40px 0;
+      margin: 10% 20vw 40px 0;
       &__link {
         border-top: solid #111111 1px;
         border-bottom: solid #111111 1px;
