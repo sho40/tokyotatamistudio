@@ -337,7 +337,6 @@
           }
         }
         &__pattern {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -374,7 +373,6 @@
           }
         }
         &__order-made {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -532,6 +530,9 @@
     &__main {
       padding: 120px 3vw 20px;
     }
-
+  }
+  #product_expository_writing{
+    margin-top: 2rem;
+    text-align: center;
   }
 }
