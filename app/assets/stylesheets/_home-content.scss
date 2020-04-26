@@ -442,6 +442,32 @@
         font-size: 15px;
         display: block;
       }
+      &__about {
+        &__text {
+          display: flex;
+          &__left {
+            font-size: 18px;
+            line-height: 40px;
+            letter-spacing: 1px;
+            padding-top: 7%;
+          }
+          &__right {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            font-size: 36px;
+            line-height: 66px;
+            letter-spacing: 3px;
+            white-space: nowrap;
+            position: relative;
+            left: 15%;
+            top: -7rem;
+            &__second {
+              top: 28%;
+              position: relative;
+            }
+          }
+        }
+      }
     }
     &__contact {
       margin: 40px 20vw 40px 0;
