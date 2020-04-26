@@ -246,6 +246,50 @@
   .home-content {
     padding-left: 14vw;
     font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+
+    &__introduce {
+      &__title::before {
+        content: 'About Tatami';
+        font-size: 15px;
+        display: block;
+      }
+      &__about {
+        &__text {
+          display: flex;
+          &__left {
+            font-size: 18px;
+            line-height: 40px;
+            letter-spacing: 1px;
+            padding-top: 7%;
+            opacity: 0;
+            -webkit-transition: all 1.5s;
+            -moz-transition: all 1.5s;
+            -o-transition: all 1.5s;
+            -ms-transition: all 1.5s;
+            transition: all 1.5s;
+          }
+          .fade_on {
+            opacity: 1;
+          }
+          &__right {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            font-size: 36px;
+            line-height: 66px;
+            letter-spacing: 3px;
+            white-space: nowrap;
+            position: relative;
+            left: 15%;
+            top: -7rem;
+            &__second {
+              top: 28%;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+
     &__products {
       &__title::before {
         content: 'products';
@@ -436,39 +480,7 @@
         }
       }
     }
-    &__introduce {
-      &__title::before {
-        content: 'About Tatami';
-        font-size: 15px;
-        display: block;
-      }
-      &__about {
-        &__text {
-          display: flex;
-          &__left {
-            font-size: 18px;
-            line-height: 40px;
-            letter-spacing: 1px;
-            padding-top: 7%;
-          }
-          &__right {
-            -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-            font-size: 36px;
-            line-height: 66px;
-            letter-spacing: 3px;
-            white-space: nowrap;
-            position: relative;
-            left: 15%;
-            top: -7rem;
-            &__second {
-              top: 28%;
-              position: relative;
-            }
-          }
-        }
-      }
-    }
+    
     &__contact {
       margin: 40px 20vw 40px 0;
       &__link {
