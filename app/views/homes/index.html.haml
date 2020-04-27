@@ -22,6 +22,26 @@
       .mainvisual__text__center 畳に関する商品を販売します。
       .mainvisual__text__left 営業時間 9:00 ~ 17:00 ※日祝定休
   .home-content
+
+    #onebox.home-content__introduce
+      #onebox__title.home-content__introduce__title 伝統の畳
+      #onebox__main.home-content__introduce__about
+        .home-content__introduce__about__text
+          #fade_on_parts.home-content__introduce__about__text__left
+            畳には和の空間を作り出す力があると思います。
+            %br/
+            和の空間を作り、皆様の生活に落ち着きや安らぎを与えられるような商品を販売したいと思います。
+            %br/
+            サイズ指定の畳や畳小物などのオーダーメイド商品、
+            %br/
+            「このようなもの作れますか？」といったお問い合わせでも大歓迎です。
+            %br/
+            もちろん畳の表替え、入れ替えもできますのでお気軽にご相談ください。
+          .home-content__introduce__about__text__right
+            .home-content__introduce__about__text__right__first 落ち着きのある空間を
+            .home-content__introduce__about__text__right__second 生み出すお手伝い
+
+
     #onebox.home-content__products
       #onebox__title.home-content__products__title 商品
       #onebox__main.home-content__products__list
@@ -29,14 +49,31 @@
           = link_to products_path, class: 'home-content__products__list__minitatami__frame' do
             = image_tag 'product1.jpg', class: "home-content__products__list__minitatami__frame__image" 
           .home-content__products__list__minitatami__title ミニ畳
+          #product_expository_writing
+            陶磁器を置いたり、花瓶を置いたり、
+            %br/
+            和の空間作りにもってこいです！
         .home-content__products__list__pattern
           = link_to products_path, class: 'home-content__products__list__pattern__frame' do
             = image_tag 'pattern.jpg', class: "home-content__products__list__pattern__frame__image" 
-          .home-content__products__list__pattern__title 縁
+          .home-content__products__list__pattern__title 
+            縁
+          #product_expository_writing
+            畳の縁でつくるバッグやポーチなどを作る手芸の材料にいかがでしょうか。
+            %br/
+            １メートルから販売をしておりますので、
+            %br/
+            お好きな柄の畳縁をご希望の長さで購入いただけます。
         .home-content__products__list__order-made
           = link_to (), class: 'home-content__products__list__order-made__frame' do
             = image_tag 'product2.jpg', class: "home-content__products__list__order-made__frame__image" 
           .home-content__products__list__order-made__title オーダーメイド
+          #product_expository_writing
+            ご希望のサイズの畳や畳小物を作ります。
+            %br/
+            畳の厚さ縦横長さできるだけご要望に近いものを作ります。
+            %br/
+            「こんなの作れる？」といったお問い合わせも大歓迎です！
 
     #onebox.home-content__rental
       #onebox__title.home-content__rental__title レンタル
@@ -44,14 +81,30 @@
         .home-content__rental__about__box
           .home-content__rental__about__box__top
             .home-content__rental__about__box__top__left
+              = image_tag 'fireworks_AdobeStock_131330417_Preview.jpeg', class: 'home-content__rental__about__box__top__left__image'
             .home-content__rental__about__box__top__right
+              .home-content__rental__about__box__top__right__title ~和の空間を貸し出します~
+              .home-content__rental__about__box__top__right__list
+                %ul.home-content__rental__about__box__top__right__list__first-half
+                  %li.home-content__rental__about__box__top__right__list__first-half__jan 1月  元旦
+                  %li.home-content__rental__about__box__top__right__list__first-half__feb 2月  梅のお花見
+                  %li.home-content__rental__about__box__top__right__list__first-half__mar 3月  ひな祭り,お花見
+                  %li.home-content__rental__about__box__top__right__list__first-half__apr 4月  お花見,GW
+                  %li.home-content__rental__about__box__top__right__list__first-half__may 5月  GW
+                  %li.home-content__rental__about__box__top__right__list__first-half__jun 6月  梅雨入り。。。
+                .home-content__rental__about__box__top__right__list__late
+                  %li.home-content__rental__about__box__top__right__list__late__jul 7月  海・山開き、花火大会
+                  %li.home-content__rental__about__box__top__right__list__late__aug 8月  花火大会
+                  %li.home-content__rental__about__box__top__right__list__late__sep 9月  運動会
+                  %li.home-content__rental__about__box__top__right__list__late__oct 10月  運動会、紅葉
+                  %li.home-content__rental__about__box__top__right__list__late__nov 11月  紅葉、七五三、
+                  %li.home-content__rental__about__box__top__right__list__late__dec 12月  クリスマス
           .home-content__rental__about__box__bottom
             .home-content__rental__about__box__bottom__left
             .home-content__rental__about__box__bottom__right
+              = image_tag 'mountain_AdobeStock_315349043_Preview.jpeg', class: 'home-content__rental__about__box__bottom__right__image'
     
-    #onebox.home-content__introduce
-      #onebox__title.home-content__introduce__title 伝統の畳
-      #onebox__main.home-content__introduce__about
+            
 
     .bottom
       .home-content__contact

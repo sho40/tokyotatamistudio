@@ -245,6 +245,51 @@
 
   .home-content {
     padding-left: 14vw;
+    font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+
+    &__introduce {
+      &__title::before {
+        content: 'About Tatami';
+        font-size: 15px;
+        display: block;
+      }
+      &__about {
+        &__text {
+          display: flex;
+          &__left {
+            font-size: 18px;
+            line-height: 40px;
+            letter-spacing: 1px;
+            padding-top: 7%;
+            opacity: 0;
+            -webkit-transition: all 1.5s;
+            -moz-transition: all 1.5s;
+            -o-transition: all 1.5s;
+            -ms-transition: all 1.5s;
+            transition: all 1.5s;
+          }
+          .fade_on {
+            opacity: 1;
+          }
+          &__right {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            font-size: 36px;
+            line-height: 66px;
+            letter-spacing: 3px;
+            white-space: nowrap;
+            position: relative;
+            left: 15%;
+            top: -7rem;
+            &__second {
+              top: 28%;
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+
     &__products {
       &__title::before {
         content: 'products';
@@ -253,8 +298,10 @@
       }
       &__list {
         display: flex;
+        border-top: solid 2px #666;
+        border-bottom: solid 2px #666;
+        border-left: solid 2px #666;
         &__minitatami {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -290,7 +337,6 @@
           }
         }
         &__pattern {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -327,7 +373,6 @@
           }
         }
         &__order-made {
-          height: 350px;
           width: 350px;
           text-decoration: none;
           color: #111111;
@@ -372,6 +417,9 @@
         display: block;
       }
       &__about {
+        border-top: solid 2px #666;
+        border-bottom: solid 2px #666;
+        border-left: solid 2px #666;
         &__box {
           width: 80%;
           height: 600px;
@@ -381,10 +429,40 @@
             height: 50%;
             &__left {
               width: 50%;
-              background: #111111;
+              &__image {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
             }
             &__right {
               width: 50%;
+              padding: 1rem;
+              display: block;
+              &__title {
+                text-align: center;
+                font-size: 1.5rem;
+                letter-spacing: .5rem;
+              }
+              &__list {
+                margin-top: 2rem;
+                display: flex;
+                list-style: none;
+                padding-left: 1rem;
+                &__first-half {
+                  width: 50%;
+                }
+                &__first-half li {
+                  margin-top: .5rem;
+                }
+                &__late {
+                  width: 50%;
+                }
+                &__late li {
+                  margin-top: .5rem;
+                }
+                
+              }
             }
           }
           &__bottom {
@@ -395,22 +473,19 @@
             }
             &__right {
               width: 50%;
-              background: #111111;
+              &__image {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+              }
             }
           }
         }
       }
     }
-    &__introduce {
-      &__title::before {
-        content: 'About Tatami';
-        font-size: 15px;
-        display: block;
-      }
-    }
+    
     &__contact {
-      margin: 40px 20vw 40px 0;
-      font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+      margin: 10% 20vw 40px 0;
       &__link {
         border-top: solid #111111 1px;
         border-bottom: solid #111111 1px;
@@ -446,7 +521,6 @@
     height: 100%;
     width: 100%;
     margin-top: 55px;
-    font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
     display: block;
     &__title {
       font-size: 32px;
@@ -456,6 +530,9 @@
     &__main {
       padding: 120px 3vw 20px;
     }
-
+  }
+  #product_expository_writing{
+    margin-top: 2rem;
+    text-align: center;
   }
 }
