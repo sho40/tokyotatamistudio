@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   #商品
   resources :products, only: [:index, :show]
 
+  resources :rental, only: [:index]
+
   # カート周り
   resources :carts, only: [:show]
   post '/add_item' => 'carts#add_item'
