@@ -435,6 +435,9 @@
       }
       &__about {
         background: #fffffb;
+        font-size: 24px;
+        letter-spacing: 4px;
+        
       }
     }
  
@@ -452,7 +455,7 @@
         text-decoration: none;
         color: #111111;
         &:hover{
-          background: #0F4C3A;
+          background: #26453D;
           color: #d6cdcd;
         }
         &__main-text {
