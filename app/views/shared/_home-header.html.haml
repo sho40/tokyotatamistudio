@@ -8,7 +8,7 @@
         #menu.home-header__main__content__menu__products
           = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products__link', id: 'header-font'
         #menu.home-header__main__content__menu__rental
-          = link_to "畳レンタル", {}, class: 'home-header__main__content__menu__rental__link', id: 'header-font'
+          = link_to "畳レンタル", rental_index_path , class: 'home-header__main__content__menu__rental__link', id: 'header-font'
         #menu.home-header__main__content__menu__contact
           = link_to "お問い合わせ", new_contact_path , class: 'home-header__main__content__menu__contact__link', id: 'header-font'
   .home-header__right
@@ -25,6 +25,6 @@
           .nav-content-list__products
             = link_to "商品一覧", products_path, class: 'nav-content-list__products__link'
           .nav-content-list__rental
-            = link_to "畳レンタル", {}, class: 'nav-content-list__rental__link'
+            = link_to "畳レンタル", rental_index_path , class: 'nav-content-list__rental__link'
           .nav-content-list__contact
             = link_to "お問い合わせ", new_contact_path, class: 'nav-content-list__contact__link' 
