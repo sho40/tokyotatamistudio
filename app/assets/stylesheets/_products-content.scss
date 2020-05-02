@@ -3,7 +3,7 @@
   padding: 80px 355px;
   &__main {
     &__items {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       &__box {
         margin: 0 10px 70px 10px;
@@ -32,8 +32,12 @@
           float: right;
           position: relative;
           bottom: 5px;
+          z-index: 1;
         }
       }
+    }
+    .is-show {
+      display:flex;
     }
   }
 }
