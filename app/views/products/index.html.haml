@@ -10,7 +10,7 @@
           .products-content__main__items__box__name
             = p.name
           .products-content__main__items__box__price
-            = "¥#{number_with_delimiter p.price}"
+            = "¥#{number_with_delimiter p.price}(税込)"
     .products-content__main__items.items-frame
       - @frames.each do |f|
         .products-content__main__items__box
@@ -19,7 +19,7 @@
           .products-content__main__items__box__name
             = f.name
           .products-content__main__items__box__price
-            = "¥#{number_with_delimiter f.price}"
+            = "¥#{number_with_delimiter f.price}(税込)"
 
 = render 'shared/footer'
 
