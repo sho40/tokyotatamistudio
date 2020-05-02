@@ -6,7 +6,7 @@
         = link_to "Tokyo Tatami Studio", root_path, class: 'home-header__main__content__logo__bottom',id: 'header-font'
       .home-header__main__content__menu
         #menu.home-header__main__content__menu__products
-          = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products__link', id: 'header-font'
+          = link_to "商品一覧", products_path, class: 'home-header__main__content__menu__products__link', id: 'header-font', data: {"turbolinks" => false}
         #menu.home-header__main__content__menu__rental
           = link_to "畳レンタル", rental_index_path , class: 'home-header__main__content__menu__rental__link', id: 'header-font'
         #menu.home-header__main__content__menu__contact

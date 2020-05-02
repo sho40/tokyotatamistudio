@@ -46,7 +46,7 @@
       #onebox__title.home-content__products__title 商品
       #onebox__main.home-content__products__list
         .home-content__products__list__minitatami
-          = link_to products_path, class: 'home-content__products__list__minitatami__frame' do
+          = link_to products_path, class: 'home-content__products__list__minitatami__frame', data: {"turbolinks" => false} do
             = image_tag 'product1.jpg', class: "home-content__products__list__minitatami__frame__image" 
           .home-content__products__list__minitatami__title ミニ畳
           #product_expository_writing
