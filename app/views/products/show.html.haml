@@ -15,17 +15,26 @@
           = @product.text
       .product-show-content__main__bottom__right
         .product-show-content__main__bottom__right__price
-          = "¥#{number_with_delimiter @product.price}"
+          = "¥#{number_with_delimiter @product.price}(税込)"
         .product-show-content__main__bottom__right__attention
           = "※こちらの価格には消費税が含まれています。"
           %br/
-          = "※送料は別途発生いたします。詳細は"
-          = link_to "こちら", 'http://www.kuronekoyamato.co.jp/ytc/search/estimate/ichiran.html', class: 'product-show-content__main__bottom__right__attention__link'
+          = "※送料は別途発生いたします。"
+          %br/
+          = "※送料一律200円、7000円以上送料無料です。"
         .product-show-content__main__bottom__right__add-cart
           = form_with model: @cart_item, url: add_item_path do |f|
             .product-show-content__main__bottom__right__add-cart__sum
               = f.label '数量'
-              = f.number_field :quantity, value: 1
+              - if @product.category_id == 3
+                = f.number_field :quantity, value: 1
+                メートル
+                %br/
+                .product-show-content__main__bottom__right__add-cart__sum__info
+                  ※ご希望の長さを入力ください
+              - else 
+                = f.number_field :quantity, value: 1
+                個
             .product-show-content__main__bottom__right__add-cart__bottom
               = f.hidden_field :product_id, value: @product.id
               = f.submit :"カートに追加", class: 'product-show-content__main__bottom__right__add-cart__bottom__btn'
