@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
     
     @products = Product.all
     @categories = Category.all
+    @frames = Product.where(category_id: 3)
   end
 
   def show

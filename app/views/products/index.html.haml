@@ -1,7 +1,8 @@
 = render 'shared/products-header'
 .products-content
   .products-content__main
-    .products-content__main__items
+    
+    .products-content__main__items.items-all.is-show
       - @products.each do |p|
         .products-content__main__items__box
           = link_to product_path(p.id), class: 'image-wrap' do
@@ -9,7 +10,17 @@
           .products-content__main__items__box__name
             = p.name
           .products-content__main__items__box__price
-            = "¥#{number_with_delimiter p.price}"
+            = "¥#{number_with_delimiter p.price}(税込)"
+    .products-content__main__items.items-frame
+      - @frames.each do |f|
+        .products-content__main__items__box
+          = link_to product_path(f.id), class: 'image-wrap' do
+            = image_tag(f.image.url, class: 'products-content__main__items__box__image')
+          .products-content__main__items__box__name
+            = f.name
+          .products-content__main__items__box__price
+            = "¥#{number_with_delimiter f.price}(税込)"
+
 = render 'shared/footer'
 
 

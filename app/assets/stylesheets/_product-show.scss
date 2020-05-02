@@ -32,7 +32,7 @@
       &__left {
         margin-left: 0;
         &__text {
-          font-size: 15px;
+          font-size: 20px;
           color: #696969;
         }
       }
@@ -55,6 +55,12 @@
         }
         &__add-cart {
           margin-top: 20px;
+          &__sum {
+            font-size: 18px;
+            &__info {
+            font-size: 14px;
+            }
+          }
           &__sum label {
             font-size: 16ox;
             color: #696969;
