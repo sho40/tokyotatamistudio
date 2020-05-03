@@ -46,7 +46,7 @@
 ## App URL
 <br>
 
-現在未公開(4月中頃公開予定)  
+現在未公開(5月中頃公開予定)  
 ![sample33](https://user-images.githubusercontent.com/54761041/78972316-6e808680-7b48-11ea-8f41-9c0e4006f947.gif)
 
 ## 機能
