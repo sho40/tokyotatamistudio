@@ -22,6 +22,10 @@ class PurchasesController < ApplicationController
     @cart_items = current_cart.cart_items
     @customer = Customer.find_by(id: purchase.customer_id)
     if purchase.save
+      @cart_items.each do |item|
+        @stock = item.product.stock -= item.quantity
+        item.product.update(stock: @stock)
+      end
       session[:cart_id] = nil
       NotificationMailer.send_confirm_to_customer(@customer).deliver
     else
