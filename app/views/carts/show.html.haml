@@ -39,16 +39,17 @@
             .cart-content__main__current-cart__box__bottom__products
               .cart-content__main__current-cart__box__bottom__products__title 商品
               .cart-content__main__current-cart__box__bottom__products__price 
-                = @total.sum
+                = "¥#{number_with_delimiter @total.sum}"
             .cart-content__main__current-cart__box__bottom__shipping-fee
               .cart-content__main__current-cart__box__bottom__shipping-fee__title 送料
-              .cart-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
+              .cart-content__main__current-cart__box__bottom__shipping-fee
+                = "¥#{ @freight }"
             .cart-content__main__current-cart__box__bottom__total
               .cart-content__main__current-cart__box__bottom__total__box
                 .cart-content__main__current-cart__box__bottom__total__box__left
                   = "合計 :" 
                 .cart-content__main__current-cart__box__bottom__total__box__right
-                  = "¥ #{number_with_delimiter @total.sum}"
+                  = "¥ #{number_with_delimiter @total.sum + @freight}"
     - if @cart_items.empty?
       .cart-content__main__links
         .cart-content__main__links__products-link
