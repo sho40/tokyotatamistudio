@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load',function(){
   $(function(){
-
     $('.nice-textbox').on('focusin', function(){
       $(this).parent().find('label').addClass('active');
     });
