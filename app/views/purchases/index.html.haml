@@ -70,7 +70,7 @@
           = link_to "カートに戻る", cart_path(current_cart.id), class: 'confarm-content__main__purchase__cart-link__btn'
         .confarm-content__main__purchase__purchase-link
           = form_with local: true, url: purchases_pay_path, class: 'card-form' do |form|
-            = form.hidden_field :amount, value: @total.sum
+            = form.hidden_field :amount, value: (@total.sum + @freight)
             = form.hidden_field :cart_id, value: current_cart.id
             = form.hidden_field :customer_id, value: current_customer.id
             .confarm-content__main__purchase__purchase-link__btn#open-modal カード決済をする
