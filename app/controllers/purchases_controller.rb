@@ -22,13 +22,14 @@ class PurchasesController < ApplicationController
     @customer = Customer.find_by(id: purchase.customer_id)
     if params[:cache] #現金決済
       if purchase.save
+        @amount = purchase.amount
         @cart_items.each do |item|
           @stock = item.product.stock -= item.quantity
           item.product.update(stock: @stock)
         end
-        session[:cart_id] = nil
-        NotificationMailer.send_cache_confirm_to_customer(@customer).deliver
+        NotificationMailer.send_cache_confirm_to_customer(@customer, @cart_items, @amount).deliver
         redirect_to purchases_cache_path
+        session[:cart_id] = nil
       else
         render :index
       end
@@ -40,12 +41,13 @@ class PurchasesController < ApplicationController
         currency: 'jpy',
       )
       if purchase.save
+        @amount = purchase.amount
         @cart_items.each do |item|
           @stock = item.product.stock -= item.quantity
           item.product.update(stock: @stock)
         end
+        NotificationMailer.send_confirm_to_customer(@customer, @cart_items, @amount).deliver
         session[:cart_id] = nil
-        NotificationMailer.send_confirm_to_customer(@customer).deliver
       else
         render :index
       end

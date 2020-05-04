@@ -1,12 +1,14 @@
 class NotificationMailer < ApplicationMailer
   layout 'mailer'
 
-  def send_confirm_to_customer(customer)
+  def send_confirm_to_customer(customer, cart_items, amount)
     @customer = customer
     email_with_name = %("#{@customer.name} 様" <#{@customer.email}> )
+    @cart_items = cart_items
+    @amount = amount
 
     mail(
-      subject: "ご利用ありがとうございます / 東京畳工房",
+      subject: "購入内容確認 / 東京畳工房",
       to: email_with_name,
       bcc: ENV['OWNER_ADDRESS']
     ) do |format|
@@ -14,12 +16,14 @@ class NotificationMailer < ApplicationMailer
     end
   end
   
-  def send_cache_confirm_to_customer(customer)
+  def send_cache_confirm_to_customer(customer, cart_items, amount)
     @customer = customer
     email_with_name = %("#{@customer.name} 様" <#{@customer.email}> )
+    @cart_items = cart_items
+    @amount = amount
 
     mail(
-      subject: "ご利用ありがとうございます / 東京畳工房",
+      subject: "購入内容確認・お支払い方法ご案内/ 東京畳工房",
       to: email_with_name,
       bcc: ENV['OWNER_ADDRESS']
     ) do |format|
