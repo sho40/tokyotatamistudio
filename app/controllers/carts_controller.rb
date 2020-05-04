@@ -7,6 +7,11 @@ class CartsController < ApplicationController
     @cart_items.each do |item|
       @subtotal = item.product.price * item.quantity
       @total << @subtotal
+      if @total.sum >= 7000
+        @freight = 0
+      else
+        @freight = 200
+      end
     end
   end
 
