@@ -28,8 +28,10 @@ Rails.application.routes.draw do
   delete '/delete_item' => 'carts#delete_item'
 
   # 購入確認、決済機能
-  resources :purchases, only: [:index, :pay]
+  resources :purchases, only: [:index, :pay, :cache]
   post 'purchases/pay' => 'purchases#pay'
+  get 'purchases/cache' => 'purchases#cache'
+
 
   #お問い合わせ
   resources :contacts, only: [:new, :create]
