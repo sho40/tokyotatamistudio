@@ -57,13 +57,14 @@
                 = number_with_delimiter @total.sum
             .confarm-content__main__current-cart__box__bottom__shipping-fee
               .confarm-content__main__current-cart__box__bottom__shipping-fee__title 送料
-              .confarm-content__main__current-cart__box__bottom__shipping-fee 配送先によって異なります
+              .confarm-content__main__current-cart__box__bottom__shipping-fee
+                = "¥#{ @freight }"
             .confarm-content__main__current-cart__box__bottom__total
               .confarm-content__main__current-cart__box__bottom__total__box
                 .confarm-content__main__current-cart__box__bottom__total__box__left
                   = "合計 :" 
                 .confarm-content__main__current-cart__box__bottom__total__box__right
-                  = "¥ #{number_with_delimiter @total.sum}"
+                  = "¥ #{number_with_delimiter @total.sum + @freight}"
       .confarm-content__main__purchase
         .confarm-content__main__purchase__cart-link
           = link_to "カートに戻る", cart_path(current_cart.id), class: 'confarm-content__main__purchase__cart-link__btn'
@@ -73,6 +74,7 @@
             = form.hidden_field :cart_id, value: current_cart.id
             = form.hidden_field :customer_id, value: current_customer.id
             .confarm-content__main__purchase__purchase-link__btn#open-modal カード決済をする
+            = form.button '銀行振込', name: "cache", class: 'confarm-content__main__purchase__purchase-link__bank-transfer'
 
             #card-overlay
             .card-modalWindow#card-modalWindow
@@ -124,7 +126,6 @@
           
   
   = render 'shared/footer'
-  = link_to "ログアウト", destroy_customer_session_path, method: :delete
 
 
 
