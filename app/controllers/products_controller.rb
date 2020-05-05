@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   def index
-    
     @products = Product.all
     @categories = Category.all
     @frames = Product.where(category_id: 3)
