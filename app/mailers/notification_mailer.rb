@@ -8,7 +8,7 @@ class NotificationMailer < ApplicationMailer
     @amount = amount
 
     mail(
-      subject: "購入内容確認 / 東京畳工房",
+      subject: "購入内容確認のお知らせ / 東京畳工房",
       to: email_with_name,
       bcc: ENV['OWNER_ADDRESS']
     ) do |format|
@@ -23,7 +23,7 @@ class NotificationMailer < ApplicationMailer
     @amount = amount
 
     mail(
-      subject: "購入内容確認・お支払い方法ご案内/ 東京畳工房",
+      subject: "購入内容確認のお知らせ/ 東京畳工房",
       to: email_with_name,
       bcc: ENV['OWNER_ADDRESS']
     ) do |format|
