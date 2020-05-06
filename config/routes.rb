@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   #商品
   resources :products, only: [:index, :show]
 
+  #レンタル
   resources :rental, only: [:index]
 
   # カート周り
