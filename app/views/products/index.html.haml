@@ -1,8 +1,7 @@
 = render 'shared/products-header'
 .products-content
   .products-content__main
-    
-    .products-content__main__items.items-all.is-show
+    %ul.products-content__main__items.items-all.is-show
       - @products.each do |p|
         .products-content__main__items__box
           = link_to product_path(p.id), class: 'image-wrap' do
@@ -11,7 +10,7 @@
             = p.name
           .products-content__main__items__box__price
             = "¥#{number_with_delimiter p.price}(税込)"
-    .products-content__main__items.items-frame
+    %ul.products-content__main__items.items-frame
       - @frames.each do |f|
         .products-content__main__items__box
           = link_to product_path(f.id), class: 'image-wrap' do
