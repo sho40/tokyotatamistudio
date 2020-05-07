@@ -6,7 +6,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding-top: 7rem;
+  padding: 7rem 0;
   font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
   &__title{
     color: #fff;
@@ -22,7 +22,7 @@
 .nice-wrap{
   position: relative;
   width: 500px;
-  margin: 0 auto 155px;
+  margin: 0 auto;
 }
 .nice-wrap div {
   position: relative;
