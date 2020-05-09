@@ -8,8 +8,7 @@
   .footer {
     &__content {
       color: #ffffff;
-      background-image: image-url("AdobeStock_317344235.jpeg");
-      background-position: left;
+      background: #1C1C1C;
       padding: 50px 100px;
       display: flex;
       justify-content: space-between;
@@ -28,25 +27,15 @@
           &__address {
             display: flex;
             font-size: 18px;
-            &__map-btn {
-              margin-left: 15px;
-              cursor: pointer;
-              &__text {
-                padding: 5px;
-                color: #ffffff;
-                background: #666666;
-                position: relative;
-                bottom: 5px;
-                border-radius: 5px;
-                box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-              }
-            }
           }
           &__tel {
             font-size: 18px;
           }
           &__open {
             font-size: 15px;
+          }
+          &__map {
+            margin-top: 3rem;
           }
         }
 

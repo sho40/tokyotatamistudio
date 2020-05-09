@@ -7,12 +7,11 @@
         .footer__content__left__info__address
           .footer__content__left__info__address__text
             = "〒197-0011 東京都福生市福生2457-6"
-          .footer__content__left__info__address__map-btn
-            .footer__content__left__info__address__map-btn__text{href: "javascript:;", onclick: "window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都福生市大字福生２４５７−６'));return false;"} map
         .footer__content__left__info__tel
           = "TEL 090-3538-6885"
         .footer__content__left__info__open
           = "○営業時間 9:00 ~ 17:00 ※日祝定休"
+        %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103681.31787269707!2d139.3635845144638!3d35.70060414521046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f.3!3m3!1m2!1s0x6019202715aabfed%3A0xa869e19123a21594!2z5a6J6Jek55Wz5bqX!5e0!3m2!1sja!2sjp!4v1589001347424!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "700", class: "footer__content__left__info__map"}
     .footer__content__right
       .footer__content__right__logo
         = link_to "東京畳工房", root_path, class: 'footer__content__right__logo__top', id: 'footer-font'
