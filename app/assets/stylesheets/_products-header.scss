@@ -1,6 +1,6 @@
 #products-header-font {
   text-decoration: none;
-  color: #666666;
+  color: #373C38;
 }
 
 .icon::before {
@@ -10,7 +10,10 @@
 }
 
 .cart-color {
-  color: rgb(252, 159, 77);
+  color: #373C38;
+  position: absolute;
+  top: 4rem;
+  right: 3rem;
 }
 
 
@@ -59,7 +62,7 @@
       text-align: center;
       padding: .5rem 0;
       margin-left: .5rem;
-      border: solid 1px#1C1C1C;
+      border: solid 1px#373C38;
       cursor: pointer;
       -webkit-transition: all 0.5s;
       transition: all 0.5s;
@@ -67,6 +70,6 @@
   }
 }
 .product-tab.is-active {
-  background: #1C1C1C;
+  background: #373C38;
   color: #fffffb;
 }
