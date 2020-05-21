@@ -2,24 +2,41 @@ require 'rails_helper'
 
 RSpec.describe Customer, type: :model do
   describe '#create' do
+
+    #name
     it "nameがない場合は登録できないこと" do
       customer = Customer.new(name: "",tel: "09012345676",email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
       customer.valid?
       expect(customer.errors[:name]).to include("を入力してください")
     end
-
+    
+    #tel
     it "telがない場合は登録できないこと" do
       customer = Customer.new(name: "武",tel: "",email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
       customer.valid?
       expect(customer.errors[:tel]).to include("を入力してください")
     end
 
+    it "telが11桁以上の場合は登録できない" do
+      customer = Customer.new(name: "武",tel: "09012345676333",email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
+      customer.valid?
+      expect(customer.errors[:tel]).to include("は不正な値です")
+    end
+    
+    it "telの始まりが000は登録できない" do
+      customer = Customer.new(name: "武",tel: "00045676456",email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
+      customer.valid?
+      expect(customer.errors[:tel]).to include("は不正な値です")
+    end
+
+    #email
     it "emailがない場合は登録できないこと" do
       customer = Customer.new(name: "武",tel: "09012345676",email: "", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
       customer.valid?
       expect(customer.errors[:email]).to include("を入力してください")
     end
 
+    #password
     it "passwordがない場合は登録できないこと" do
       customer = Customer.new(name: "武",tel: "09012345676",email: "kkk@gmail.com", password: "", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
       customer.valid?
@@ -32,6 +49,7 @@ RSpec.describe Customer, type: :model do
       expect(customer.errors[:password_confirmation]).to include("を入力してください")
     end
 
+    #住所
     it "postcodeがない場合は登録できないこと" do
       customer = Customer.new(name: "武",tel: "09012345676",email: "kkk@gmail.com", password: "00000000", password_confirmation: "00000000", postcode: "", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
       customer.valid?
