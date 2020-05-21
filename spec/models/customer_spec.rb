@@ -36,6 +36,12 @@ RSpec.describe Customer, type: :model do
       expect(customer.errors[:email]).to include("を入力してください")
     end
 
+    it "@マークのあとのドメイン" do
+      customer = Customer.new(name: "武",tel: "09012345676",email: "example@uuu", password: "00000000", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
+      customer.valid?
+      expect(customer.errors[:email]).to include("は不正な値です")
+    end
+
     #password
     it "passwordがない場合は登録できないこと" do
       customer = Customer.new(name: "武",tel: "09012345676",email: "kkk@gmail.com", password: "", password_confirmation: "00000000", postcode: "1900013", prefecture_code: "東京都", address_city: "立川市", address_street: "一番町345-11")
