@@ -13,16 +13,15 @@
     display: flex;
     justify-content: space-between;
     &__main {
-      padding: 5px;
+      padding: 10px;
+      width: 70%;
       &__content {
         &__logo {
-          width: 120px;
           &__top {
-            font-size: 20px;
+            font-size: 30px;
           }
           &__bottom {
-            font-size: 3px;
-            margin-left: 3px;
+            display: none;
           }
         }
         &__menu {
@@ -76,25 +75,22 @@
           transform: translateX(-105%);
           .nav-content-logo {
             position: absolute;
-            top: 1rem;
+            top: .5rem;
             left: 1rem;
-            width: 120px;
+            width: 70%;
             &__top {
-              font-size: 20px;
+              font-size: 30px;
               color: #fff;
             }
             &__bottom {
-              font-size: 3px;
-              padding-left: 3px;
-              color: #fff;
+              display: none;
             }
           }
           .nav-content-list {
             width: 100vw;
-            padding-top: 55px;
-            margin: 7rem auto 0;
+            margin: 6rem auto 0;
             display: block;
-            font-size: 42px;
+            font-size: 32px;
             text-align: center;
             font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
             &__products {
