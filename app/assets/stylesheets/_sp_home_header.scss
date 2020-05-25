@@ -11,6 +11,7 @@
     position: fixed;
     background: #fffffb;
     display: flex;
+    justify-content: space-between;
     &__main {
       padding: 5px;
       &__content {
@@ -33,11 +34,12 @@
       }
     }
     &__right {
-      width: 225px;
+      width: 25%;
+      background: #111;
       #nav-drawer {
         position: absolute;
-        right: 60px;
-        top: 25px;
+        right: 65px;
+        top: 20px;
         .nav-unshown {
           display: none;
         }
@@ -74,18 +76,17 @@
           transform: translateX(-105%);
           .nav-content-logo {
             position: absolute;
-            top: 2vh;
-            left: 2vw;
-            display: block;
-            width: 225px;
-            padding-top: 10px;
+            top: 1rem;
+            left: 1rem;
+            width: 120px;
             &__top {
-              font-family: 'mouhitu';
-              font-size: 45px;
+              font-size: 20px;
+              color: #fff;
             }
             &__bottom {
-              font-size: 15px;
-              padding-left: 15px;
+              font-size: 3px;
+              padding-left: 3px;
+              color: #fff;
             }
           }
           .nav-content-list {
@@ -150,9 +151,9 @@
       #nav-open span, #nav-open span:before, #nav-open span:after {
         position: absolute;
         height: 3px;
-        width: 25px;
+        width: 40px;
         border-radius: 3px;
-        background: #555;
+        background: #ffffff;
         display: block;
         content: '';
         cursor: pointer;
