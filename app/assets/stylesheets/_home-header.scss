@@ -1,17 +1,11 @@
+
+
 @media screen and (min-width: 767px) {
   #header-font {
     text-decoration: none;
     color: #333333;
     font-weight: bold;
   }
-
-  // @font-face {
-  //   font-family: 'mouhitu';
-  //   src: url('fonts/KouzanMouhituFontOTF.otf') format('woff');
-  //   src: url('fonts/KouzanMouhituFontOTF.otf') format('truetype');
-  // }
-
-
 
   .home-header {
     width: 100%;
@@ -166,7 +160,7 @@
           font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
         }
       }
-  
+
     }
     &__right {
       width: 225px;
@@ -304,7 +298,4 @@
 
     }
   }
-
-
 }
-
