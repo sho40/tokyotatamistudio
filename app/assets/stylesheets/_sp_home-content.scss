@@ -3,4 +3,60 @@
     width: 100vw;
     margin-top: 4rem;
   }
+  .mainvisual {
+    &__hello-message {
+      display: none;
+    }
+    &__open-message {
+      position: absolute;
+      top: 25%;
+      left: 4%;
+      right: 0;
+      bottom: 0;
+      z-index: 25;
+      &__tatami {
+        font-size: 18px;
+        font-family: 'ヒラギノ角ゴ Std W8', 'Hiragino Kaku Gothic Std';
+        color: #ffffff;
+        letter-spacing: 10px;
+        &::after {
+          content: 'Japan-specific culture';
+          display: block;
+          letter-spacing: 4px;
+          color: #ffffff;
+          font-size: 6px;
+          position: absolute;
+          left: -2%;
+        }
+      }
+    }
+    &__text {
+      position: absolute;
+      top: 12%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      font-size: 7px;
+      font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+      -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+      &__right {
+        background: #ffffff;
+        opacity: .9;
+        padding-top: 2%;
+        height: 14%;
+      }
+      &__center {
+        background: rgba(144, 180, 75, .9);
+        padding-top: 2%;
+        height: 25%;
+      }
+      &__left {
+        background: rgba(144, 180, 75, .9);
+        padding-top: 2%;
+        height: 30%;
+      }
+    }
+  }
 }
