@@ -61,7 +61,7 @@
   }
   .home-content {
     &__introduce{
-      padding: 1rem;
+      padding: .5rem;
       &__title {
         display: none;
       }
@@ -70,7 +70,7 @@
           display: flex;
           &__left {
             margin-top: 30vh;
-            font-size: x-small;
+            font-size: small;
             position: relative;
             left: 6vw;
           }
