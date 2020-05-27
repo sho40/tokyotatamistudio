@@ -69,16 +69,16 @@
         &__text {
           display: flex;
           &__left {
-            margin-top: 30vh;
-            font-size: small;
+            margin-top: 28vh;
             position: relative;
+            font-size: smaller;
             left: 6vw;
           }
           &__right {
             -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
             position: relative;
-            right: 40vw;
+            right: 45vw;
           }
         }
       }
