@@ -59,4 +59,29 @@
       }
     }
   }
+  .home-content {
+    &__introduce{
+      padding: 1rem;
+      &__title {
+        display: none;
+      }
+      &__about {
+        &__text {
+          display: flex;
+          &__left {
+            margin-top: 30vh;
+            font-size: x-small;
+            position: relative;
+            left: 6vw;
+          }
+          &__right {
+            -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+            position: relative;
+            right: 40vw;
+          }
+        }
+      }
+    }
+  }
 }
