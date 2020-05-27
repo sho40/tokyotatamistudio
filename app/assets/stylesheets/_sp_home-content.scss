@@ -15,7 +15,7 @@
       bottom: 0;
       z-index: 25;
       &__tatami {
-        font-size: 28px;
+        font-size: 20px;
         font-family: 'ヒラギノ角ゴ Std W8', 'Hiragino Kaku Gothic Std';
         color: #ffffff;
         letter-spacing: 10px;
@@ -24,7 +24,7 @@
           display: block;
           letter-spacing: 4px;
           color: #ffffff;
-          font-size: 16px;
+          font-size: 10px;
           position: absolute;
           left: -2%;
         }
@@ -45,17 +45,17 @@
         background: #ffffff;
         opacity: .9;
         padding-top: 2%;
-        height: 18%;
+        height: 20%;
       }
       &__center {
         background: rgba(144, 180, 75, .9);
         padding-top: 2%;
-        height: 29%;
+        height: 37%;
       }
       &__left {
         background: rgba(144, 180, 75, .9);
         padding-top: 2%;
-        height: 32%;
+        height: 40%;
       }
     }
   }
