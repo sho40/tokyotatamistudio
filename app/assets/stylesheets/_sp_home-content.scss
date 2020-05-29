@@ -4,6 +4,7 @@
     margin-top: 4rem;
   }
   .mainvisual {
+    font-family: 'ヒラギノ角ゴ Std W8', 'Hiragino Kaku Gothic Std';
     &__hello-message {
       display: none;
     }
@@ -79,6 +80,24 @@
             writing-mode: vertical-rl;
             position: relative;
             right: 45vw;
+          }
+        }
+      }
+    }
+    &__products {
+      &__title {
+        text-align: center;
+        padding: 2rem;
+        font-size: x-large;
+        letter-spacing: 4px;
+      }
+      &__list {
+        display: block;
+        &__minitatami {
+          padding: 2rem;
+          &__frame__image {
+            width: 100%;
+            height: auto;
           }
         }
       }
