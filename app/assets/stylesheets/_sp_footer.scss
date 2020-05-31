@@ -1,0 +1,66 @@
+@media screen and (max-width: 479px) {
+  #footer-font {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+  }
+  .footer {
+    &__content {
+      color: #ffffff;
+      background: #373C38;
+      padding: 50px 5vw;
+      display: block;
+      &__left {
+        display: block;
+        &__title {
+          display: block;
+          padding-top: 10px;
+          font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
+          font-size: 20px;
+          font-weight: bolder;
+        }
+        &__info {
+          margin-top: 45px;
+          font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
+          &__address {
+            display: flex;
+            font-size: 18px;
+          }
+          &__tel {
+            font-size: 18px;
+          }
+          &__open {
+            font-size: 15px;
+          }
+          &__map {
+            margin-top: 3rem;
+            width: 90vw;
+          }
+        }
+
+      }
+      &__right {
+        display: block;
+        &__logo {
+          display: block;
+          width: 225px;
+          padding-top: 10px;
+          &__top {
+            font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
+            font-size: 45px;
+          }
+          &__bottom {
+            font-size: 15px;
+            padding-left: 15px;
+          }
+        }
+        &__mail {
+          margin-top: 20px;
+          margin-left: 20px;
+          font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
