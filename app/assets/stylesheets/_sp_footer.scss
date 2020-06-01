@@ -16,21 +16,21 @@
           display: block;
           padding-top: 10px;
           font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
-          font-size: 20px;
+          font-size: 1em;
           font-weight: bolder;
         }
         &__info {
-          margin-top: 45px;
+          margin-top: 10%;
           font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
           &__address {
             display: flex;
-            font-size: 18px;
+            font-size: 8px;
           }
           &__tel {
-            font-size: 18px;
+            font-size: 8px;
           }
           &__open {
-            font-size: 15px;
+            font-size: 5px;
           }
           &__map {
             margin-top: 3rem;
@@ -40,26 +40,7 @@
 
       }
       &__right {
-        display: block;
-        &__logo {
-          display: block;
-          width: 225px;
-          padding-top: 10px;
-          &__top {
-            font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
-            font-size: 45px;
-          }
-          &__bottom {
-            font-size: 15px;
-            padding-left: 15px;
-          }
-        }
-        &__mail {
-          margin-top: 20px;
-          margin-left: 20px;
-          font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
-          font-size: 15px;
-        }
+        display: none;
       }
     }
   }
