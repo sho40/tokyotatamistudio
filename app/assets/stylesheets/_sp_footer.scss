@@ -24,17 +24,17 @@
           font-family: '游明朝',YuMincho,'Hiragino Mincho ProN','Hiragino Mincho Pro','ＭＳ 明朝',serif;
           &__address {
             display: flex;
-            font-size: 8px;
+            font-size: .8em;
           }
           &__tel {
-            font-size: 8px;
+            font-size: .8em;
             a {
               color: #fff;
               text-decoration: none;
             }
           }
           &__open {
-            font-size: 5px;
+            font-size: .8em;
           }
           &__map {
             margin-top: 3rem;
