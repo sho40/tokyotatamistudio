@@ -26,10 +26,12 @@
             display: flex;
             font-size: 8px;
           }
-          &__tel a{
+          &__tel {
             font-size: 8px;
-            color: #fff;
-            text-decoration: none;
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
           }
           &__open {
             font-size: 5px;
