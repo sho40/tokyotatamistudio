@@ -5,7 +5,7 @@ if Rails.env.production?
     domain: 'gmail.com',
     port: 587,
     user_name: ENV['OWNER_ADDRESS'],
-    password: ENV['OWNER_ADDRESS_PASSWORD'],
+    password: ENV['carfsgpbfwqepile'],
     authentication: 'plain',
     enable_starttls_auto: true
   }
@@ -14,3 +14,7 @@ elsif Rails.env.development?
 else
   ActionMailer::Base.delivery_method = :test
 end
+
+
+
+# OWNER_ADDRESS_PASSWORD
