@@ -1,0 +1,33 @@
+@media screen and (min-width: 767px) {
+  
+  .privacy-content {
+    margin-top: 8rem;
+    padding: 12vh 18vw;
+    font-family: "游明朝体",YuMincho,"游明朝","YuMincho","Noto Serif JP","Hiragino Mincho ProN","Hiragino Mincho Pro","ＭＳ 明朝", serif;
+    h1 {
+      font-size: large;
+      font-weight: bold
+    }
+    p {
+      font-size: smaller;
+    }
+    dt {
+      font-weight: bold;
+      margin-bottom: .2rem;
+      font-size: smaller;
+    }
+    dd {
+      margin-bottom: .5rem;
+      font-size: smaller;
+    }
+    &__title {
+      width: 100%;
+      border-bottom: solid 2px #ccc;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+    &__intro {
+      margin-bottom: 1rem;
+    }
+  }
+}
