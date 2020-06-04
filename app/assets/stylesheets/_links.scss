@@ -1,0 +1,15 @@
+.link-list {
+  display: flex;
+  margin-top: 8rem;
+  a {
+    text-decoration: none;
+    color: #434343;
+    font-size: smaller;
+    font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
+  }
+  &__privacy {
+  }
+  &__low {
+    margin-left: 4rem;
+  }
+}
