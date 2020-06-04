@@ -13,3 +13,21 @@
     margin-left: 4rem;
   }
 }
+
+.footer__content__right__links {
+  position: relative;
+  top: 23rem;
+  right: 0;
+  display: flex;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: small;
+    font-family: 'ヒラギノ明朝 Pro W6','HiraMinPro-W6';
+  }
+  &__privacy {
+  }
+  &__low {
+    margin-left: 1rem;
+  }
+}
