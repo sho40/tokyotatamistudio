@@ -14,7 +14,13 @@ Rails.application.routes.draw do
   resources :customers, only: [:edit, :update]
 
   # Top画面
-  resources :homes, only: [:index]
+  resources :homes, only: [:index] do
+    # プライバシーポリシー＆特定商法
+    collection do
+      get :privacy
+      get :low
+    end
+  end
 
   #商品
   resources :products, only: [:index, :show]
