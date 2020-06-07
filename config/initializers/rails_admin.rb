@@ -23,6 +23,16 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
 
+  # config.model Product do
+  #   edit do
+  #     # 全てのフィールドを加える
+  #     include_all_fields
+  #     field :text do
+  #       f.text_area true
+  #     end
+  #   end
+  # end
+
 
 
   config.actions do
