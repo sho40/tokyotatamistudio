@@ -133,7 +133,7 @@
             }
           }
           &__bottom {
-            margin: 20px 0 65px;
+            margin: 20px 0 5px;
             &__products {
               display: flex;
               text-align: right;
@@ -154,7 +154,6 @@
               background: #dbdbdb;
               &__box {
                 display: flex;
-                margin-left: 80%;
                 font-size: 25px;
                 &__left {
                   margin-right: 20px;
@@ -167,7 +166,7 @@
       &__links {
         margin-top: 30px;
         border: #dbdbdb solid 3px;
-        padding: 30px;
+        padding: 1rem;
         display: flex;
         &__products-link {
           width: 50%;
