@@ -1,5 +1,4 @@
-
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 479px) {
   #cart-header-font {
     text-decoration: none;
     color: #111111;
@@ -31,7 +30,7 @@
     width: 100%;
     font-family: Arial,Helvetica Neue,Helvetica,ヒラギノ角ゴ Pro W3,sans-serif; -moz-osx-font-smoothing: grayscale;
     &__main {
-      width: 950px;
+      // width: 950px;
       margin: 30px auto;
       &__current-cart {
         margin-top: 20px;
@@ -54,20 +53,17 @@
             border-bottom: #dbdbdb solid 2px;
             padding-bottom: 7px;
             display: flex;
-            font-size: 14px;
+            font-size: 1em;
             &__name {
               width: 40%;
             }
             &__price {
-              text-align: right;
               width: 20%;
             }
             &__sum {
-              text-align: right;
               width: 20%;
             }
             &__subtotal {
-              text-align: right;
               width: 20%;
             }
           }
@@ -75,34 +71,29 @@
             &__empty {
               text-align: center;
               line-height: 300px;
-              font-size: 18px;
+              font-size: 1em;
               color: #666666;
             }
             &__product {
               border-bottom: #dbdbdb solid 2px;
               padding-bottom: 7px;
               display: flex;
-              font-size: 14px;
+              font-size: .5em;
               &__title {
                 width: 40%;
-                display: flex;
-                justify-content: space-between;
                 &__name {
                   font-weight: bold;
                   line-height: 140px;
                 }
                 &__image {
-                  height: 83px;
-                  width: 125px;
+                  width: 80%;
                   object-fit: cover;
-                  margin: 30px 50px 0 40px;
                   box-shadow: 3px 3px 3px rgba(0,0,0,0.6);
                 }
               }
               &__price {
                 width: 20%;
                 line-height: 140px;
-                text-align: right;
               }
               &__sum {
                 width: 20%;
@@ -118,14 +109,16 @@
                   &__change {
                     &__field {
                       width: 20%;
+                      border: #dbdbdb solid .5px;
                     }
                     &__btn {
                       box-shadow: 1px .3px .3px rgba(0,0,0,0.4);
+                      width: 70%;
                     }
                   }
                   &__delete-btn {
                     border: #dbdbdb solid 1px;
-                    margin: 10px 0 0 80px;
+                    margin-top: 1rem;
                     text-align: center;
                     cursor: pointer;
                     box-shadow: 1px 1px 1px rgba(0,0,0,0.6);

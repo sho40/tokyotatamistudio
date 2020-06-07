@@ -26,7 +26,7 @@
                   = "¥#{number_with_delimiter i.product.price}"
                 .cart-content__main__current-cart__box__middle__product__sum
                   .cart-content__main__current-cart__box__middle__product__sum__quantity
-                    = "現在の数量 : #{i.quantity}"
+                    = "数量 : #{i.quantity}"
                   .cart-content__main__current-cart__box__middle__product__sum__edit
                     = form_with model: @cart_item, url: update_item_path, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change' do |item|
                       = item.number_field :quantity, class: 'cart-content__main__current-cart__box__middle__product__sum__edit__change__field'
