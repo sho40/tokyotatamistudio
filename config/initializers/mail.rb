@@ -5,8 +5,8 @@ if Rails.env.production?
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    address: "smtp.gmail.com",
-    domain: "gmail.com",
+    address: "smtp.yahoo.co.jp",
+    domain: "yahoo.co.jp",
     port: 587,
     user_name: mail,
     password: pass,
