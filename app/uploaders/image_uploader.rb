@@ -12,8 +12,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :fog
   end
 
-  process resize_to_fit: [200, 200]
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
