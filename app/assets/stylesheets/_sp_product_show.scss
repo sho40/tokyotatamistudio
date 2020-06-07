@@ -1,51 +1,51 @@
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 479px) {
   .product-show-content {
     width: 100%;
     &__main {
       padding-top: 8rem;
-      width: 48%;
-      margin: 3rem auto;
       &__title {
         font-family: Arial,Helvetica Neue,Helvetica,ヒラギノ角ゴ Pro W3,sans-serif; -moz-osx-font-smoothing: grayscale;
-        margin-bottom: 30px;
-        font-size: 26px;
+        margin: 2rem 0;
+        font-size: 1.6em;
+        text-align: center;
         border-bottom: dashed 1px #928888;
-        padding: 0 0 12px;
+        padding: 0 0 .5rem;
       }
       &__images {
-        display: flex;
+        padding: .5rem;
         &__left {
           &__main-image {
-            width: 30vw;
+            width: 100%;
             object-fit: cover;
           }
         }
         &__right {
-          height: 100%;
+          display: none;
         }
       }
       &__bottom {
-        display: flex;
+        display: block;
         justify-content: space-between;
-        margin: 4rem 0;
+        margin: 1rem auto;
+        width: 80%;
         &__left {
-          width: 30vw;
+          width: 100%;
           &__text {
-            font-size: 20px;
+            font-size: 1em;
             color: #696969;
           }
         }
         &__right {
-          width: 260px;
+          width: 100%;
           &__price {
-            font-size: 1.6em;
+            font-size: 1em;
             padding: 0 0 3px;
             text-align: right;
             font-weight: 100;
             border-bottom: 1px solid #e0e0dd;
           }
           &__attention {
-            font-size: 12px;
+            font-size: .6em;
             color: #696969;
             margin: 10px 0;
             &__link {
@@ -55,18 +55,19 @@
           &__add-cart {
             margin-top: 20px;
             &__sum {
-              font-size: 18px;
+              font-size: 1em;
+              text-align: right;
               &__info {
-              font-size: 14px;
+              font-size: .6em;
               }
             }
             &__sum label {
-              font-size: 16ox;
+              font-size: 1em;
               color: #696969;
             }
             &__sum input {
               border-radius: 5px;
-              width: 30%;
+              width: 10%;
               border: 1px solid #d6cdcd;
             }
             &__bottom {
@@ -86,10 +87,6 @@
                 transition: all 0.5s;
                 cursor: pointer;
                 font-size: 0.8em;
-              }
-              &__btn:hover{
-                background-color: #222;
-                color: #d6cdcd;
               }
             }
           }
