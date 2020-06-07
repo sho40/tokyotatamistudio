@@ -12,7 +12,7 @@
     .product-show-content__main__bottom
       .product-show-content__main__bottom__left
         .product-show-content__main__bottom__left__text
-          = @product.text
+          = simple_format(@product.text)
       .product-show-content__main__bottom__right
         .product-show-content__main__bottom__right__price
           = "¥#{number_with_delimiter @product.price}(税込)"
