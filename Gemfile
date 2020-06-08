@@ -87,6 +87,7 @@ gem 'dotenv-rails'
 gem 'rails-i18n'
 
 gem 'fog-aws'
+gem 'activeadmin'
 
 group :development, :test do
   gem 'capistrano'
