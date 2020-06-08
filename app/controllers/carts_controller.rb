@@ -4,7 +4,7 @@ class CartsController < ApplicationController
   def show
     @cart_items = current_cart.cart_items
     @total = []
-    @cart_items.each do |item|
+    @cart_items.each do |item| 
       @subtotal = item.product.price * item.quantity
       @total << @subtotal
       if @total.sum >= 7000
