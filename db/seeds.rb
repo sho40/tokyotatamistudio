@@ -8,3 +8,4 @@
 # AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
 AdminUser.create!(email: "#{ENV["OWNER_ADDRESS"]}", password: "#{ENV["ADMIN_PASSWORD"]}", password_confirmation: "#{ENV["ADMIN_PASSWORD"]}") 
+    
