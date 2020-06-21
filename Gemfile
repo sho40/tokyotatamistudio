@@ -78,8 +78,6 @@ gem "haml-rails"
 gem 'carrierwave'
 
 gem 'devise'
-gem 'cancancan'
-gem 'rails_admin'
 gem 'jquery-rails'
 gem 'jp_prefecture'
 gem 'payjp'
